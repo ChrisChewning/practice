@@ -1,4 +1,4 @@
-
+// links: https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
 
                 GENERAL GROUP PROJECT WORKFLOW: BRANCHING
 
