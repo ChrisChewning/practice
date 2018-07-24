@@ -13,9 +13,13 @@ max(x, y, z, ..., n)	Returns the number with the highest value
 min(x, y, z, ..., n)	Returns the number with the lowest value
 
 pow(x, y)	Returns the value of x to the power of y
+example Math.pow(8,2) //64
 
 random()	Returns a random number between 0 and 1
 
 round(x)	Returns the value of x rounded to its nearest integer
 
 sqrt(x)	Returns the square root of x
+example Math.sqrt(64) //8
+
+https://www.w3schools.com/js/js_math.asp

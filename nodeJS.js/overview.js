@@ -18,5 +18,4 @@ Mongoose
 
 
 mongodb
-
 - a web-scale database.
