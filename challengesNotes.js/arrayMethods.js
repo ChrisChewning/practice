@@ -8,7 +8,7 @@ var timesFour = oldArray.map(function(val){
 console.log(timesFour); // returns [4, 8, 12]
 console.log(oldArray);  // returns [1, 2, 3]
 
-
+--------------------------------------------------------------------------------
 
 REDUCE - Method to iterate through array and reduce it down to one value.
 example...
@@ -21,8 +21,7 @@ sum // 118.11
 
 //you have 2 parameters in your function. Reduce acts like a loop, going through each number.
 //The 1st parameter, total, is your accumulator. This starts at 29.76. It keeps track of the number as we reduce.
-//The 2nd parameter, amount, is just letting you get to the next number. When you run out of numbers this doesn't
-//do anything, leaviny you with one number. Thus, your array has been reduced.
+//The 2nd parameter, amount, is just letting you get to the next number. When you run out of numbers this doesn't do anything. You are just left with one number: your array has been reduced.
 
 var array = [4,5,6,7,8];
 var singleVal = 0;
@@ -33,6 +32,20 @@ singleVal = array.reduce(function(array, singleVal) {
 });
 
 
+array = [1,2,3];
+singleVal = array.reduce(function(array, singleVal) {
+return array + singleVal;
+});
+console.log(singleVal); //returns 6.
+
+ex. finding avg. with reduce
+var scores = [1, 4, 6, 8];
+var result = scores.reduce((total, score) => total + score) / scores.length;
+console.log(result); // 4.75
+
+//note: the => means
+
+--------------------------------------------------------------------------------
 
 FILTER - The filter method is used to iterate through an array and filter
 out elements where a given condition is not true.
@@ -51,7 +64,7 @@ var newArray = oldArray.filter(function(val) {
   return val <6;
 });
 
-------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 
 SORT - Sorts the values in an array alphabetically or numerically. Unlike Reduce
@@ -67,11 +80,15 @@ array.sort(function(a, b) {
  return b - a;
 }); //returns [21, 12, 2, 1]
 
+--------------------------------------------------------------------------------
+
 REVERSE - Reverses an array.
 
 var array = [1,2,3,4,5,6,7];
 var newArray = []; //empty array to put data in.
 newArray = array.reverse(); // [7,6,5,4,3,2,1]
+
+--------------------------------------------------------------------------------
 
 CONCACT - Concatenates
 
@@ -80,6 +97,7 @@ var newArray = [];
 var concatMe = [4,5,6];
 newArray = oldArray.concat(concatMe);
 
+--------------------------------------------------------------------------------
 
 SPLIT - Splits a string into an array.
 var string = "Split me into an array";
@@ -87,7 +105,7 @@ var array = [];
 array = string.split(' '); //splits at every white space.
 array = string.split(' '); // splits at every letter.
 
-
+--------------------------------------------------------------------------------
 
 JOIN - We can use the join method to join each element of an array
 into a string separated by whatever delimiter you provide as an argument.
