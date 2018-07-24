@@ -1,4 +1,12 @@
-HTML - Tags - <a href=""/> - tables - id - class - charset - form validation
+HTML
+
+Tags - <a href=""/>
+tables -
+id -
+class -
+charset -
+form validation
+
 
 CSS
 
@@ -14,7 +22,9 @@ media queries -
 
 
 Why accessibility is important?
-Difference between semantics and syntax?
+
+
+Difference between semantics and syntax? Syntax is the structure of the language. Semantics is your codes meaning.
 
 
 JAVASCRIPT
@@ -54,15 +64,16 @@ Null = a variable that is defined to have a null value.
 ex: var nullVariable = null; // null
 typeof nullVariable // "object"
 
-Undefined =
+Undefined = isnt defined.
 Number = number
 String = "" ()
-Symbol = ??
+Symbol = ?? lets you add private-ish properties to data?
 Object = everything in javascript.
 
 
             - ES 5, 6, 7, 8
-            - data types (string, array, object etc..)
+
+
             - numbers and operators
             - callback
             - anonymous vs named functions and variables
@@ -125,7 +136,9 @@ Mongoose js
     - basic mongoose methods (find, findById, create etc..)
 Async & Await
 bcrypt
-Sessions
+Sessions -
+(sessions secret: A session secret in connect is simply used to compute the hash. Without the string, access to the session would essentially be "denied".)
+
 Password Hash
 Salt in password hash
 how to connect css to express app?
