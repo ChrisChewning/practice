@@ -1,21 +1,12 @@
 https://medium.com/createdd-notes/starting-with-authentication-a-tutorial-with-node-js-and-mongodb-25d524ca0359
 
-//EXPRESS IS A FRAMEWORK
 
 
-
-
-
-//NPM
-// These are libraries built by the awesome community which will solve most of your generic problems. npm (Node package manager) has packages you can use in your apps to make your development faster and efficient.
-
-
-//json always has double quotes. It never has single quotes.
-
-// 1st thing: in your terminal type git init
-
-//module: a smaller package of information that will be used in a larger package.
-
+NPM
+These are libraries built by the awesome community which will solve most of your generic problems. npm (Node package manager) has packages you can use in your apps to make your development faster and efficient.
+json always has double quotes. It never has single quotes.
+First thing: in your terminal type git init
+module: a smaller package of information that will be used in a larger package.
 
 
 
@@ -38,11 +29,8 @@ EXPRESS
 express is a framework, which is built on top of node. It allows us to create servers faster and more efficiently. It gives us extra power & tools.
 
 
-
-
 NPM
 the 'largest ecosystem of open source libraries in the world.'
-
 
 
 MONGOD

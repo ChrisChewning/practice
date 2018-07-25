@@ -19,9 +19,15 @@ animations -
 css grids  -
 media queries -
 
+____________________________________________________________________________
 
-
+ACCESSIBILITY
 Why accessibility is important?
+- disabilities. ex: alt in imgs for screen readers
+- different screen sizes.
+- attention spans.
+
+____________________________________________________________________________
 
 SEMANTICS & SYNTAX
 Difference between semantics and syntax? Syntax is the structure of the language. Semantics is your codes meaning.
@@ -82,6 +88,7 @@ ____________________________________________________________________________
 
 CONSOLE LOG()
 A debugger, or 'sandbox' to test your code.
+
 ____________________________________________________________________________
 
 DATA TYPES
@@ -103,6 +110,8 @@ JAVASCRIPT EDITIONS
 ES 5, 6, 7, 8 are all javascript editions. (es5: 2009; es8: 2017)
 
 ____________________________________________________________________________
+
+OPERATORS
 
 NUMBERS & OPERATORS
 operators: + - * / % (modulus) ++ --
@@ -169,7 +178,8 @@ ____________________________________________________________________________
 
 
             - anonymous vs named functions and variables
-            - stack trace
+
+            - stack trace (understand which stack youre using and how it works = how they interact each other)
 
 
 LOOPS (all 3 or 4 types)
@@ -190,7 +200,14 @@ ____________________________________________________________________________
             - Events
 
             - this (https://codeburst.io/javascript-the-keyword-this-for-beginners-fb5238d99f85)
-            - return
+
+____________________________________________________________________________
+
+RETURN
+In JavaScript, return statements cease execution in a function and return a value to the caller; JavaScript functions require an explicit return statement for returning the result of an expression (the value) from a function. When a return statement is not present, the interpreter automatically returns undefined.
+
+____________________________________________________________________________
+
             - DOM Manipulation
             - Higher order functions (map, filter, reduce etc..)
             - constructors v classes
@@ -236,11 +253,14 @@ CRUD - Create Read Update Delete
 
 When we are building APIs, we want our models to provide four basic types of functionality. The model must be able to Create, Read, Update, and Delete resources. Computer scientists often refer to these functions by the acronym CRUD. A model should have the ability to perform at most these four functions in order to be complete. If an action cannot be described by one of these four operations, then it should potentially be a model of its own.
 
+C (post route)
+R (get route)
+U (put route)
+D (delete route)
+
 
 
 EJS Templates
-Server app.listen
-app.use
 
 SQL v NoSQL Databases
 

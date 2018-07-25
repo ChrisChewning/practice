@@ -17,7 +17,7 @@ check: method-overrider is in json & required (for method: delete & others(?))
 check: again the prefix in app.use is set. For example, if you are in /events/new and you want your form action to post to home you may have to put /events not / b.c of the prefix app.use sets.
 
 
-//get and post are the only things ejs can read.
-when you use method="get" method="put" it read get and then uses method-override
+<form action="/events/<%=event.id%>?_method=PUT" method="POST">
+<form  action="/authors/<%=author.id%>?_method=DELETE" method="POST">
 
-?_ is saying use method-override
+Explanation: You need the ?_method= if it is put, patch, or delete. Then the second method is POST.
