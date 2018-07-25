@@ -176,11 +176,7 @@ Git/Github - clone v fork - Why is it useful? Why could it be dangerous?
      - Branching
     - Pull requests
 
-Node Package Manager (npm) - the 'largest ecosystem of open source libraries in the world.'
 
-npm start vs nodemon
-
-npm init
 
 package.json
 module.exports
@@ -210,21 +206,12 @@ Mongod
 Mongoose js
     - basic mongoose methods (find, findById, create etc..)
 
+
+
 Async & Await (a better way to do promises)
-async - this is for asynchronous functions, which is when one function awaits another one.
+* asynch is a function. This is for asynchronous functions when one function awaits another one. Async can be used without await. "When you create a function with the async keyword that function will always return a Promise. When you return inside your async function it wraps your value in a Promise."
 
+* await is a keyword that can only be used inside await.
+Await lets you pause the execution of an async function until it receives the results of a promise. This lets you write async code that reads in the order that it’s executed.
 
-bcrypt -
-
-Sessions -
-
-Sessions Secret - The secret is used to hash the session with HMAC. The session is then protected against session hijacking by checking the fingerprint against the hash with the secret. Withouth the string, access to the session will be denied.
-
-
-
-
-
-Password Hash
-Salt in password hash
-how to connect css to express app?
-Types of errors you have commonly seen. And their possible solutions.
+*Await allows you to write asynchronous code with no callbacks at all. This makes your code much more readable. And await works with any promise, not just promises created by async functions.
