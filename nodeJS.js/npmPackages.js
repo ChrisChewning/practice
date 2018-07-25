@@ -18,6 +18,13 @@ All npm packages contain a file, usually in the project root, called package.jso
 
 
 
+Middleware
+    body-parser
+    method-override
+
+
+what is middleware and what isn't?... 
+
 "dependencies": {
   "bcrypt": "^3.0.0",
   "body-parser": "^1.18.3",

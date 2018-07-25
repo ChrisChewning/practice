@@ -150,7 +150,7 @@ instanceof	Returns true if an object is an instance of an object type
 
 ____________________________________________________________________________
 
-TRUTHY/FALSY
+TRUTHY/FALSY (link: https://codeburst.io/javascript-showdown-vs-7be792be15b5)
 
 FALSY VALUES (6 OF THEM)
 false  (false == 0 //true)
@@ -169,14 +169,20 @@ ____________________________________________________________________________
 
             - anonymous vs named functions and variables
             - stack trace
-            - truthy/falsy
+
+
+LOOPS (all 3 or 4 types)
 
             - for loop & for each
             - nested loops
 
+____________________________________________________________________________
+
             - array methods
             - object methods
             - string methods (all on MDN)
+
+____________________________________________________________________________
 
             - scope
             - conditionals (if else)
@@ -194,16 +200,23 @@ ____________________________________________________________________________
                 - bootstrap
                 - materialize
 
+____________________________________________________________________________
+
 Difference between Object Oriented Programming and Functional Programming
+
+____________________________________________________________________________
 
 Wire-framing
 User Stories
+ReadMe formatting
 
+____________________________________________________________________________
 
 Git/Github - clone v fork - Why is it useful? Why could it be dangerous?
      - Branching
     - Pull requests
 
+____________________________________________________________________________
 
 NODE STUFF
 module.exports
@@ -212,10 +225,11 @@ HTTP Server
 MVC (Models Views Controllers)***
 Models vs Schema
 
-RESTful (GET POST PUT DELETE) Routes
+
 request, response (what is happening here?)
 req.body v req.params.id
 
+____________________________________________________________________________
 
 CRUD - Create Read Update Delete
 
@@ -226,13 +240,12 @@ When we are building APIs, we want our models to provide four basic types of fun
 EJS Templates
 Server app.listen
 app.use
-Middleware
-    body-parser
-    method-override
+
 SQL v NoSQL Databases
 
+____________________________________________________________________________
 
-
+ASYNC AND AWAIT
 
 Async & Await (a better way to do promises)
 * asynch is a function. This is for asynchronous functions when one function awaits another one. Async can be used without await. "When you create a function with the async keyword that function will always return a Promise. When you return inside your async function it wraps your value in a Promise."
