@@ -29,7 +29,14 @@ Difference between semantics and syntax? Syntax is the structure of the language
 
 JAVASCRIPT
 
-variables - (const and let and var): const doesn't change, while let does. var will just go ahead and declare the variable, which can cause a lot of bugs, because you might accidentally use the same variable twice.
+____________________________________________________________________________
+
+VARIABLES
+1. const - const doesn't change. use this the most.
+2. let - let does change. example: math, scores, etc.
+3. var - var will just go ahead and declare the variable, which can cause a lot of bugs, because you might accidentally use the same variable twice.
+
+____________________________________________________________________________
 
 FUNCTIONS: WHY THE ARROW FUNCTION
 1. shorter syntax
@@ -70,11 +77,11 @@ button.addEventListener('click', () => {
   this.classList.toggle('on');
 });
 
-
+____________________________________________________________________________
 
 CONSOLE LOG()
 A debugger, or 'sandbox' to test your code.
-
+____________________________________________________________________________
 
 DATA TYPES
 1. Boolean = true/false.
@@ -89,16 +96,18 @@ typeof nullVariable // "object"
 6. Symbol = ?? lets you add private-ish properties to data?
 7. Object = everything in javascript.
 
+____________________________________________________________________________
 
 JAVASCRIPT EDITIONS
 ES 5, 6, 7, 8 are all javascript editions. (es5: 2009; es8: 2017)
 
-
+____________________________________________________________________________
 
 NUMBERS & OPERATORS
-operators: + - * / % (modulus) ++ -- (++ or -- could also +2 -3 etc.)
+operators: + - * / % (modulus) ++ --
+++ (increment) or -- (decrement) could also more than just going up or down by one. You could say +2 or -3.
 
-ASSIGNMENT operators
+ASSIGNMENT OPERATORS
 = (assign)
 += (addition assignment operator adds a value to a variable)
 -=
@@ -109,8 +118,8 @@ note: + or += can be used to concatentate.
 
 
 COMPARISON OPERATORS
-==	equal to
-===	equal value and equal type
+==	equal to value (loose equality). Performs type coercion. This means we compare two values after converting them to a common type.
+===	equal value and equal type (strict equality)  ex 3 === '3' is false
 !=	not equal
 !==	not equal value or not equal type
 >	greater than
@@ -139,17 +148,22 @@ TYPE OPERATORS
 typeof	Returns the type of a variable
 instanceof	Returns true if an object is an instance of an object type
 
+____________________________________________________________________________
 
+TRUTHY/FALSY
 
 
             - anonymous vs named functions and variables
             - stack trace
             - truthy/falsy
+
             - for loop & for each
             - nested loops
+
             - array methods
             - object methods
             - string methods (all on MDN)
+
             - scope
             - conditionals (if else)
             - Events
@@ -181,15 +195,20 @@ Git/Github - clone v fork - Why is it useful? Why could it be dangerous?
 package.json
 module.exports
 HTTP Server
-Node JS
-Express JS
+
 MVC (Models Views Controllers)***
 Models vs Schema
+
 RESTful (GET POST PUT DELETE) Routes
 request, response (what is happening here?)
 req.body v req.params.id
 
-CRUD
+
+CRUD - Create Read Update Delete
+
+When we are building APIs, we want our models to provide four basic types of functionality. The model must be able to Create, Read, Update, and Delete resources. Computer scientists often refer to these functions by the acronym CRUD. A model should have the ability to perform at most these four functions in order to be complete. If an action cannot be described by one of these four operations, then it should potentially be a model of its own.
+
+
 
 EJS Templates
 Server app.listen
@@ -199,12 +218,6 @@ Middleware
     method-override
 SQL v NoSQL Databases
 
-MongoDB
-
-Mongod
-
-Mongoose js
-    - basic mongoose methods (find, findById, create etc..)
 
 
 

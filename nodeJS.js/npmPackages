@@ -1,10 +1,12 @@
 Node Package Manager (npm) - the 'largest ecosystem of open source libraries in the world.'
 
+ APP.USE()
+ type app.use() to specify middleware as the callback function
+
+
 npm start vs nodemon
 
 npm init
-
-
 
 
 

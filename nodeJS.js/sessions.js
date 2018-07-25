@@ -16,7 +16,7 @@ app.use(session({
 
 
 
-SESSIONS -
+SESSIONS - 
 
 SESSIONS SECRET - The secret is used to hash the session with HMAC. The session is then protected against session hijacking by checking the fingerprint against the hash with the secret. Withouth the string, access to the session will be denied.
 
