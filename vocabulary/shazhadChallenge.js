@@ -152,6 +152,20 @@ ____________________________________________________________________________
 
 TRUTHY/FALSY
 
+FALSY VALUES (6 OF THEM)
+false  (false == 0 //true)
+0 zero  (0 == "")//true
+“” (empty string) ("" == false) //true
+null (equal only to itself) //null == null is true
+undefined (equal only to itself) //undefined == undefined is true. so is null == undefined.
+NaN (Not A Number) //NaN isn’t equivalent to anything (not even itself!)
+
+Whenever possible, you should use triple equals to test equality. By testing the type and the value, you are always executing a true equality test.
+
+Type coercion can have some crazy rules involved (as I’ve shown above). Unless you’re very familiar with JavaScript, double equals can lead to more trouble and headaches than it’s worth. Knowing the six falsy values can go a long way to determining why something is evaluating to true or false.
+
+____________________________________________________________________________
+
 
             - anonymous vs named functions and variables
             - stack trace
