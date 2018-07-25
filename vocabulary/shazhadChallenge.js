@@ -23,8 +23,9 @@ media queries -
 
 Why accessibility is important?
 
-
+SEMANTICS & SYNTAX
 Difference between semantics and syntax? Syntax is the structure of the language. Semantics is your codes meaning.
+
 
 
 JAVASCRIPT

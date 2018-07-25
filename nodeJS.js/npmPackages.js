@@ -9,6 +9,11 @@ the 'largest ecosystem of open source libraries in the world.'
 
 npm start vs nodemon (or node server.js)
 
+nodemon - refreshes
+npm start -
+node server.js - 
+
+
 
 NPM INIT
 Creates package.json. ... The default name for this file is index.js unless you created server.js or something else.js in not in a folder.
@@ -23,7 +28,7 @@ Middleware
     method-override
 
 
-what is middleware and what isn't?... 
+what is middleware and what isn't?...
 
 "dependencies": {
   "bcrypt": "^3.0.0",

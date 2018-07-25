@@ -27,7 +27,7 @@ ONCE YOUR BRANCH IS PUSHED TO GITHUB:
 17) MERGE your branch into the staging (you can typically safely delete your branch once it has been merged)
 
 
-DELETING A BRANCH:
+DELETING A BRANCH: 
 17) $ git branch -d (name of your branch)
 
 ____________________________________________________________________________

@@ -50,9 +50,28 @@ mongod is the "Mongo Daemon" it's basically the host process for the database. W
 
 MONGODB
 - a web-scale database.
-mongo is the command-line shell that connects to a specific instance of mongod. When you run mongo with no parameters it defaults to connecting to the localhost on port 27017. If you run mongo against an invalid machine:port combination then it will fail to connect (and tell you as much).
+
+- mongo is the command-line shell that connects to a specific instance of mongod. When you run mongo with no parameters it defaults to connecting to the localhost on port 27017. If you run mongo against an invalid machine:port combination then it will fail to connect (and tell you as much).
 
 MONGOOSE
 - a schema based solution to model your application data. The schema creates key:value pairs for a set of data types (ex: string, number, boolean)
 
 - creates easy to use object reference for interacting with mongodb.
+
+
+NODEMON v. NODE ().js (ex: Node server.js) vs. NPM START
+
+Nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+
+nodemon does not require any additional changes to your code or method of development. nodemon is a replacement wrapper for node, to use nodemon replace the word node on the command line when executing your script.
+
+
+* could you write nodemon server.js?
+
+
+NPM START
+When you issue the command npm start from the root directory of your nodejs project, node will look for a scripts object in your package.json file. If found, it will look for a script with the key start and run the command specified as its value.
+
+If your package.json does not have any scripts object or if the scripts object does not have a start key, it will run the command node server.js instead.
+
+Npm scripts are pretty useful because they let you group together and run logically related commands. e.g. linters, minifiers etc.
