@@ -10,7 +10,7 @@ form validation
 
 CSS
 
-css tricks -
+css tricks - 
 z index -
 flexbox -
 margins -
@@ -177,8 +177,6 @@ Type coercion can have some crazy rules involved (as I’ve shown above). Unless
 ____________________________________________________________________________
 
 
-            - anonymous vs named functions and variables
-
             - stack trace (understand which stack youre using and how it works = how they interact each other)
 
 
@@ -207,6 +205,35 @@ RETURN
 In JavaScript, return statements cease execution in a function and return a value to the caller; JavaScript functions require an explicit return statement for returning the result of an expression (the value) from a function. When a return statement is not present, the interpreter automatically returns undefined.
 
 ____________________________________________________________________________
+
+FUNCTIONS
+
+Functions are executed when they are called. This is known as invoking a function.
+
+A Function Declaration defines a named function. To create a function declaration you use the function keyword followed by the name of the function. When using function declarations, the function definition is hoisted, thus allowing the function to be used before it is defined.
+
+
+ANONYMOUS Function
+Has no name, is not hoisted, and therefore cannot be used before they are defined..
+let name = function(parameters){
+  statements
+}
+
+
+PARAMETERS
+Parameters are used when defining a function, they are the names created in the function definition. In fact, during a function definition, we can pass in up to 255 parameters! Parameters are separated by commas in the (). Here’s an example with two parameters — param1 & param2:
+
+const param1 = true;
+const param2 = false;
+function twoParams(param1, param2){
+  console.log(param1, param2);
+}
+
+ARGUMENTS
+Arguments, on the other hand, are the values the function receives from each parameter when the function is executed (invoked). In the above example, our two arguments are true & false.
+
+
+
 
             - DOM Manipulation
             - Higher order functions (map, filter, reduce etc..)

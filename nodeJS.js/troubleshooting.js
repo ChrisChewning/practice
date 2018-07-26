@@ -21,3 +21,5 @@ check: again the prefix in app.use is set. For example, if you are in /events/ne
 <form  action="/authors/<%=author.id%>?_method=DELETE" method="POST">
 
 Explanation: You need the ?_method= if it is put, patch, or delete. Then the second method is POST.
+
+3. Check capitalization, including in folder naming conventions and routing.
