@@ -7,7 +7,8 @@ GET (Read) = asking for information. Browser is asking for information.
 POST (Create) = sending information to the server.
 
 PUT/PATCH (Update) = when a client is making a request to update a resource.
-
+            note: patch is a partial update to a particular resource’s object.
+            
 DELETE (Delete) = when a client is asking to delete a resource
 
 

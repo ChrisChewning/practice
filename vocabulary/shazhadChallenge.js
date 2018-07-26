@@ -10,13 +10,16 @@ form validation
 
 CSS
 
-css tricks - 
+css tricks -
 z index -
 flexbox -
 margins -
 ems -
 animations -
-css grids  -
+
+CSS GRIDS
+9 box grid system that allows you to overlap things and style horizontally and vertically, compared to flexbox, which is more contained.
+
 media queries -
 
 ____________________________________________________________________________
@@ -264,15 +267,21 @@ Git/Github - clone v fork - Why is it useful? Why could it be dangerous?
 ____________________________________________________________________________
 
 NODE STUFF
-module.exports
+
+
+____________________________________________________________________________
+
 HTTP Server
 
 MVC (Models Views Controllers)***
 Models vs Schema
+Documents
 
 
 request, response (what is happening here?)
 req.body v req.params.id
+
+next -
 
 ____________________________________________________________________________
 

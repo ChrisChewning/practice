@@ -28,6 +28,19 @@ Both your browser JavaScript and Node.js run on the V8 JavaScript runtime engine
 EXPRESS
 express is a framework, which is built on top of node. It allows us to create servers faster and more efficiently. It gives us extra power & tools.
 
+HOW TO USE EXPRESS
+1. const express = require('express');
+//we our using our module called express, fromthe node_modules folder to allow us to use its tools.
+2. const app = express(); //app is an object, which has properties & methods.
+//we need to initialize the express object.
+
+
+MODULE.EXPORTS
+A module encapsulates related code into a single unit of code. When creating a module, this can be interpreted as moving all related functions into a file.
+Exports is when you export it to another file so the other file can use it.
+** To import, you have to require on the file you want to use it in.
+
+
 
 NPM
 the 'largest ecosystem of open source libraries in the world.'

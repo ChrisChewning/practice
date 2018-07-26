@@ -3,47 +3,6 @@
 
 ____________________________________________________________________________
 
- APP.USE()
- type app.use() to specify middleware as the callback function.
-
- Bind application-level middleware to an instance of the app object by using the app.use() and app.METHOD() functions, where METHOD is the HTTP method of the request that the middleware function handles (such as GET, PUT, or POST) in lowercase.
-
- This example shows a middleware function with no mount path. The function is executed every time the app receives a request.
-
- var app = express() //basically app is for all of express.
-
-____________________________________________________________________________
-
-APP.LISTEN()
-This app starts a server and listens on port 3000 for connections.
-
-
-example:
-
-option 1:
-var port = 3000;
-app.listen(port, () => {
-  console.log('App is listening on port 3000');
-});
-
-
-option 2:
-app.listen(3000, () => {
-  console.log('App is listening on port 3000');
-});
-
-
-option 2: var port = process.env.PORT||config.port;
-app.listen(port, ()=>{
-    console.log();
-    console.log(chalk.green("What's up? ")+chalk.grey(`Listening on port ${port}`))
-});
-
-
-
-
-
-____________________________________________________________________________
 
 NPM START v. NODEMON v. NODE Server.js
 
