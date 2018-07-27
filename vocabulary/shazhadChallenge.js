@@ -2,26 +2,14 @@ HTML
 
 Tags - <a href=""/>
 tables -
-id -
-class -
+id - #
+class - .
 charset -
 form validation
 
+input types - text is normal. you can use email. type="password" puts bulletpoints over it.
 
-CSS
-
-css tricks -
-z index -
-flexbox -
-margins -
-ems -
-animations -
-
-CSS GRIDS
-9 box grid system that allows you to overlap things and style horizontally and vertically, compared to flexbox, which is more contained.
-
-media queries -
-
+form action - 
 ____________________________________________________________________________
 
 ACCESSIBILITY
