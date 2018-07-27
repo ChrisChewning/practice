@@ -11,3 +11,4 @@ CENTERING TWO THINGS SIDE-BY-SIDE
 FOOTER or anything sticking to the side instead of in the flow::after
 1. comment out everything, piece by piece.
 2. change an element to display: inline. It is set at display: block by default.
+3. if you clear: left or right or both, you need clearfix: after;
