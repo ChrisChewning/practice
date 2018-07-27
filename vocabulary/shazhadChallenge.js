@@ -295,6 +295,11 @@ U (put route)
 D (delete route)
 
 
+ADDING CSS
+1. In your server.js (not controllers)...
+app.use(express.static ’public’));
+public is the folder you are keeping your stylesheet etc. in.
+
 
 EJS Templates
 

@@ -1,7 +1,7 @@
 ____________________________________________________________________________
 
  APP.USE()
- type app.use() to specify middleware as the callback function.
+ tapp.use() specifies middleware as the callback function.
 
  Bind application-level middleware to an instance of the app object by using the app.use() and app.METHOD() functions, where METHOD is the HTTP method of the request that the middleware function handles (such as GET, PUT, or POST) in lowercase.
 
