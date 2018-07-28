@@ -1,5 +1,14 @@
+
+API
+__________
+
 API - Application Programming Interface.
 An API isn’t the same as the remote server — rather it is the part of the server that receives requests and sends responses.
+
+To summarize, when a company offers an API to their customers, it just means that they’ve built a set of dedicated URLs that return pure data responses — meaning the responses won’t contain the kind of presentational overhead that you would expect in a graphical user interface like a website.
+
+A in API is for a piece of software with a distinct function.
+This could be the whole server, the whole app, or just a small part of an app.
 
 
 AJAX

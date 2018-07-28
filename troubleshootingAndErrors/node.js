@@ -1,5 +1,4 @@
 
-
 1. IF ROUTES DO NOT WORK
 check: npm installs. (ex: express-session)
 check: your app.require()s in your server.js
@@ -23,3 +22,10 @@ check: again the prefix in app.use is set. For example, if you are in /events/ne
 Explanation: You need the ?_method= if it is put, patch, or delete. Then the second method is POST.
 
 3. Check capitalization, including in folder naming conventions and routing.
+
+
+4. NPM INIT & Install and Main File
+Check you have npm init and installed what you need.
+Check your main file in json is aligned to the file you have (ex: server.js)
+
+5. Check no other servers are running.

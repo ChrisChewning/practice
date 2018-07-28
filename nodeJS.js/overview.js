@@ -1,13 +1,14 @@
 https://medium.com/createdd-notes/starting-with-authentication-a-tutorial-with-node-js-and-mongodb-25d524ca0359
 
-
-
-NPM
+NPM (Node Package Manager)
 These are libraries built by the awesome community which will solve most of your generic problems. npm (Node package manager) has packages you can use in your apps to make your development faster and efficient.
 json always has double quotes. It never has single quotes.
 First thing: in your terminal type git init
 module: a smaller package of information that will be used in a larger package.
 
+
+NODE MODULES
+All the packages that are installed that your app uses.
 
 
 NODE

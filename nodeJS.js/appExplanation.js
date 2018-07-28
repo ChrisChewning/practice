@@ -14,7 +14,6 @@ ____________________________________________________________________________
 APP.LISTEN()
 This app starts a server and listens on port 3000 for connections.
 
-
 example:
 
 option 1:
@@ -42,10 +41,10 @@ REQ, RES
 
 app.get('/', (req, res) => {
 
-  //req (request) is what you are requesting to the server.
+  req (request) is what you are requesting to the server.
 
-  //res (response) is what you are sending back to the client through the browser. The server always has to send a response back to the client. Doesn't have to perform the request but it does have to send a message back.
+  res (response) is what you are sending back to the client through the browser. The server always has to send a response back to the client. Doesnt have to perform the request but it does have to send a message back.
 
-  // req is an object containing information about the HTTP request that raised the event. In response to req, you use res to send back the desired HTTP response.
+  req is an object containing information about the HTTP request that raised the event. In response to req, you use res to send back the desired HTTP response.
 
-  // Those parameters can be named anything.
+  Those parameters can be named anything.

@@ -1,19 +1,6 @@
-HTML
-
-Tags - <a href=""/>
-tables -
-id - #
-class - .
-charset -
-form validation
-
-input types - text is normal. you can use email. type="password" puts bulletpoints over it.
-
-form action - 
-____________________________________________________________________________
 
 ACCESSIBILITY
-Why accessibility is important?
+Accessibility is important for...
 - disabilities. ex: alt in imgs for screen readers
 - different screen sizes.
 - attention spans.
@@ -25,9 +12,15 @@ Difference between semantics and syntax? Syntax is the structure of the language
 
 
 
+
 JAVASCRIPT
+__________
+
+JAVASCRIPT EDITIONS
+ES 5, 6, 7, 8 are all javascript editions. (es5: 2009; es8: 2017)
 
 ____________________________________________________________________________
+
 
 VARIABLES
 1. const - const doesn't change. use this the most.
@@ -39,7 +32,8 @@ ____________________________________________________________________________
 FUNCTIONS: WHY THE ARROW FUNCTION
 1. shorter syntax
 2. no binding of the keyword 'this'
-//function rules
+
+function rules
 1. name contains a verb b.c they do something
 2. they get or set (assign a value) data.
 3. check data
@@ -97,10 +91,6 @@ typeof nullVariable // "object"
 
 ____________________________________________________________________________
 
-JAVASCRIPT EDITIONS
-ES 5, 6, 7, 8 are all javascript editions. (es5: 2009; es8: 2017)
-
-____________________________________________________________________________
 
 OPERATORS
 
@@ -170,22 +160,41 @@ ____________________________________________________________________________
 
             - stack trace (understand which stack youre using and how it works = how they interact each other)
 
-
-LOOPS (all 3 or 4 types)
-
-            - for loop & for each
-            - nested loops
-
 ____________________________________________________________________________
 
-            - array methods
-            - object methods
-            - string methods (all on MDN)
+STRING METHODS (all on MDN)
+
+
+
+ARRAY METHODS
+
+
+
+OBJECT METHODS
+Here is an object:
+let user = {
+  name: "John",
+  age: 30
+};
+
+Here is an object method:
+user.sayHi = function() {
+alert("Hello!");
+};
+user.sayHi(); // Hello!
+
+Here is method shorthand:
+let user = {
+  sayHi() { // same as "sayHi: function()"
+    alert("Hello");
+  }
+};
+
 
 ____________________________________________________________________________
 
             - scope
-            - conditionals (if else)
+            - conditionals (if else), switch
             - Events
 
             - this (https://codeburst.io/javascript-the-keyword-this-for-beginners-fb5238d99f85)
@@ -282,17 +291,34 @@ R (get route)
 U (put route)
 D (delete route)
 
+____________________________________________________________________________
 
-ADDING CSS
+ADDING CSS IN NODE
 1. In your server.js (not controllers)...
 app.use(express.static ’public’));
 public is the folder you are keeping your stylesheet etc. in.
 
+public: All the files you can access directly from your browser like static assets.
 
-EJS Templates
+*keep your css like this:  public folder --> css folder --> styles.css
 
-SQL v NoSQL Databases
+____________________________________________________________________________
 
+EJS TEMPLATES
+
+____________________________________________________________________________
+
+SQL VS NoSQL DATABASES
+SQL (Structured Query Language)
+ - primarily called as Relational Databases (RDBMS). These are table-based databases. (ex: MySQL).
+ - SQL uses structured query language (SQL) for defining and manipulating data.
+- SQL requires that you use predefined schemas to determine the structure of your data before you work with it. A change in structure could be disruptive and it takes significant upfront, preparation.
+
+NoSQL
+ - primarily called as non-relational or distributed database. These are document based, key-value pairs, graph databases or wide-column stores. (ex: mongoDB)
+ - You can create documents without having to first define their structure
+Each document can have its own unique structure.
+ - The syntax can vary from database to database, and you can add fields as you go
 ____________________________________________________________________________
 
 ASYNC AND AWAIT
