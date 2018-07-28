@@ -12,7 +12,6 @@ Difference between semantics and syntax? Syntax is the structure of the language
 
 
 
-
 JAVASCRIPT
 __________
 
@@ -90,7 +89,6 @@ typeof nullVariable // "object"
 7. Object = everything in javascript.
 
 ____________________________________________________________________________
-
 
 OPERATORS
 
@@ -193,6 +191,26 @@ let user = {
 
 ____________________________________________________________________________
 
+THIS
+(https://javascript.info/object-methods)
+this is a keyword, used a lot of times to find information in objects.
+The value of this is the object “before dot”, the one used to call the method.
+
+
+let user = { //user object
+  name: "John", //key: value pair
+  age: 30,
+
+  sayHi() {  //object method
+    alert(this.name); //refers to the object name.
+  }
+
+};
+
+user.sayHi(); // John //instatiates the object (?)
+
+
+
             - scope
             - conditionals (if else), switch
             - Events
@@ -240,6 +258,7 @@ Arguments, on the other hand, are the values the function receives from each par
             - constructors v classes
             - prototype chain
             - algorithms
+
             - Third Party Libraries and Frame works
                 - jQuery
                 - bootstrap
@@ -280,6 +299,7 @@ req.body v req.params.id
 
 next -
 
+callbacks -
 ____________________________________________________________________________
 
 CRUD - Create Read Update Delete
