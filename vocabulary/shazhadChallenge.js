@@ -251,9 +251,9 @@ ARGUMENTS
 Arguments, on the other hand, are the values the function receives from each parameter when the function is executed (invoked). In the above example, our two arguments are true & false.
 
 
+____________________________________________________________________________
 
 
-            - DOM Manipulation
             - Higher order functions (map, filter, reduce etc..)
             - constructors v classes
             - prototype chain
@@ -283,7 +283,6 @@ Git/Github - clone v fork - Why is it useful? Why could it be dangerous?
 ____________________________________________________________________________
 
 NODE STUFF
-
 
 ____________________________________________________________________________
 
