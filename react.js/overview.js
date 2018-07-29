@@ -187,3 +187,80 @@ from the parent component.
 
 propTypes — Allows you to control the presence, or types of
 certain props passed to the child component.
+
+____________________________________________________________________________
+
+STATE (think: data)
+A user interface has a lot of states (data), which makes managing a UI difficult.
+
+React helps with this b.c each component has the ability to manage its own state and pass its state down to child components if needed.
+
+You can pass states down from parent to child using props. In other words, if you have a multi component hierarchy, a common parent component should manage the state and pass it down to its children components via props.
+
+
+
+class HelloUser extends React.Component {
+  constructor(props) { //set the state of the component with constructor.
+    super(props)
+
+    this.state = { //any data in here will be part of the component's state.
+      username: 'tylermcginnis'  //telling our component to keep track of username: 'tylermcginnis'
+    }
+  }
+  render() { //object method
+    return ( //note it's ( ) not { }
+      <div>
+        Hello {this.state.username} //can use the component's username this with this.state.username.
+      </div>
+    )
+  }
+}
+
+
+____________________________________________________________________________
+
+setState - The method that allows our component to modify its own internal state. In our workflow...
+
+Signal to notify our app some data has changed→ Re-render virtual DOM -> Diff previous virtual DOM with new virtual DOM -> Only update real DOM with necessary changes.
+
+That first part: “signal to notify our app some data has changed” is actually just setState. Whenever setState is called, the virtual DOM re-renders, the diff algorithm runs, and the real DOM is updated with the necessary changes.
+
+
+
+class HelloUser extends React.Component {
+  constructor(props) {
+    super(props) //super is used here for what?
+
+    this.state = {
+      username: 'tylermcginnis'
+    }
+
+    this.handleChange = this.handleChange.bind(this) //what is bind used here for?
+  }
+  handleChange (e) { //gets called every time a user types in the input box. e = event.
+    this.setState({
+      username: e.target.value
+    })
+  }
+  render() {
+    return (
+      <div>
+        Hello {this.state.username} <br /> //refers to the username: e.target.value listener.
+        Change Name: //what you'll see on the screen.
+        <input
+          type="text"  //just like html
+          value={this.state.username}
+          onChange={this.handleChange} //can see dynamically on the screen every key stroke.
+        />
+      </div>
+    )
+  }
+}
+
+
+1. HANDLE CHANGE METHOD
+This method is going to get called every time a user types in the input box. When handleChange is called, it’s going to call setState to re-define our username withw hatever was typed into the input box (e.target.value). Remember, whenever setState is called, React creates a new virtual DOM, does the diff, then updates the real DOM.
+
+2. onChange is a React attribute and it will call whatever method you specify every time the value in the input box changes, in this case the method we specified was handleChange.
+
+3.
