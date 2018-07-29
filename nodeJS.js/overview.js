@@ -11,6 +11,14 @@ NODE MODULES
 All the packages that are installed that your app uses.
 
 
+Modules are the fundamental building blocks of the code structure. The module system allows you to organize your code, hide information and only expose the public interface of a component using module.exports. Every time you use the require call, you are loading another module.
+
+REQUIRE
+The module loading mechanism in Node.js is caching the modules on the first require call. It means that every time you use require('awesome-module') you will get the same instance of awesome-module, which ensures that the modules are singleton-like and have the same state across your application.
+
+
+
+
 NODE
 - easily communicates with a database and allows us to run a JavaScript on a computer / server.
 - Helps you read, delete, & update files.
