@@ -253,32 +253,82 @@ Arguments, on the other hand, are the values the function receives from each par
 
 ____________________________________________________________________________
 
+HIGHER ORDER FUNCTIONS
+(map, filter, reduce etc..)
 
-            - Higher order functions (map, filter, reduce etc..)
+
+CALLBACKS
+A callback function, also known as a higher-order function, is a function that is passed to another function (let's call this other function “otherFunction”) as a parameter, and the callback function is called (or executed) inside the otherFunction.
+
+Note that the item in the click method's parameter is a function, not a variable.
+
+EXAMPLE 1:
+$("#btn_1").click(function() {  //pass a function as a parameter to the click method. the click method will call (execute) the callback function we passed to it.
+  alert("Btn 1 Clicked");
+});
+
+EXAMPLE 2:
+
+
+
+
             - constructors v classes
             - prototype chain
             - algorithms
 
-            - Third Party Libraries and Frame works
-                - jQuery
-                - bootstrap
-                - materialize
 
 ____________________________________________________________________________
 
-Difference between Object Oriented Programming and Functional Programming
+
+- Third Party Libraries and Frame works
+
+- jquery
+a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. ... The modular approach to the jQuery library allows the creation of powerful dynamic web pages and Web applications.
+It simplifies event handling, HTML document traversing, Ajax interactions and animation for speedy website development. jQuery simplifies the HTML's client-side scripting, thus simplifying Web 2.0 applications development.
+
+
+- bootstrap (https://getbootstrap.com/docs/3.3/css/)
+Bootstrap is a free and open-source front-end framework (library) for designing websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions.
+Bootstrap is developed to be instantly compatible with all sizes of screens, so you dont have to worry about which device the user is accessing your site from. Yet if you prefer, you can disable responsiveness of Bootstrap.
+
+
+- materialize (https://materializecss.com/getting-started.html)
+Based on Googles material design. Ranked #8 best CSS framework on one site.
+Has starter templates.
 
 ____________________________________________________________________________
 
-Wire-framing
-User Stories
-ReadMe formatting
+OOP vs. FP
 
-____________________________________________________________________________
 
-Git/Github - clone v fork - Why is it useful? Why could it be dangerous?
-     - Branching
-    - Pull requests
+functional programming - The main aspects of Functional Programming is Pure and smaller Functions, Immutability and less Side Effects. Functional programming allows declarative pattern, which focuses on what the program should accomplish without specifying how the program should achieve the result.
+
+var books = [
+  {name:'JavaScript', pages:450},
+  {name:'Angular', pages:902},
+  {name:'Node', pages:732}
+];
+/* Imperative Pattern */
+for (var i = 0; i < books.length; i++) {
+  books[i].lastRead =  new Date();
+}
+/* Declarative Pattern */
+books.map((book)=> {
+  book.lastReadBy = 'me';
+  return book;
+});
+console.log(books);
+
+In functional programming...
+- Its pure function is to provide confidence of not changing things outside of its scope.
+- It reduces the complexity, need not to worry about how it is doing it, focus will be only on what it is doing.
+- Ease of testing, because it does not depend on state of the application and result verification also will be easy.
+- It makes the code more readable and easier to understand.
+
+
+object oriented programming - Based on the concept of objects, which contains data(attributes) and procedures(methods). Significant object-oriented languages include C++, Java, PHP, C#, Python, Ruby, Swift etc.
+
+
 
 ____________________________________________________________________________
 
@@ -324,6 +374,20 @@ public: All the files you can access directly from your browser like static asse
 ____________________________________________________________________________
 
 EJS TEMPLATES
+A simple templating language that lets you generate HTML markup with plain JavaScript. This is because the browser cant read it otherwise.
+
+<%= EJS %> shows.
+<% EJS %> doesnt show. (ex:  <% include ../partials/head %>)
+<%# %> Comment tag, no execution, no output
+
+to loop...
+<h2>Loop</h2>
+<ul>
+    <% drinks.forEach(function(drink) { %>
+        <li><%= drink.name %> - <%= drink.drunkness %></li>
+    <% }); %>
+</ul>
+
 
 ____________________________________________________________________________
 
@@ -349,3 +413,8 @@ Async & Await (a better way to do promises)
 Await lets you pause the execution of an async function until it receives the results of a promise. This lets you write async code that reads in the order that it’s executed.
 
 *Await allows you to write asynchronous code with no callbacks at all. This makes your code much more readable. And await works with any promise, not just promises created by async functions.
+
+
+____________________________________________________________________________
+BLOCKING & NON-BLOCKING CODE
+https://www.tutorialspoint.com/nodejs/nodejs_callbacks_concept.htm

@@ -1,3 +1,13 @@
+-------------------THE DOM---------------------
+the DOM: Document Object Model
+our HTML page is turned into a document, which is structured like a js object.
+the page has properties and methods, which are keys and values.
+we can manipulate and change the properties and methods. This allows us to add some interactivity to our page.
+
+when you are in your console log you can type in document. Then scroll down and see what all you can do.
+
+
+
 
 DOM MANIPULATION
 - the HTML Dom model is a tree of objects.
