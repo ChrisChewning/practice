@@ -20,9 +20,15 @@ ____________________________________________________________________________
 
 WHAT WE WRITE  IN
 
+JSX - Allows us to write HTML like syntax, which gets transformed to lightweight JavaScript objects.
+
 We dont write these in html or js. We are writing in jsx. It is javascript and xml. This allows us to combine javascript and html. Once these components are required in the browser they are inserted into the DOM.
 
 So we write it in jsx and es6 but our browser understands vanilla js. Babel is your middleware that transforms the code into normal js.
+
+
+
+
 
 
 BABEL: YOUR TRANSPILER TO CONVERT YOUR CODE
@@ -75,57 +81,109 @@ Loaders are how Webpack learns new functionality.
 
 From the documentation: “Loaders allow you to preprocess files as you require() or “load” them. Loaders are kind of like “tasks” are in other build tools, and provide a powerful way to handle frontend build steps. Loaders can transform files from a different language like CoffeeScript to JavaScript, or inline images as data URLs. Loaders even allow you to do things like require() css files right in your JavaScript!”
 
+example...
 
     module: {
-        loaders: [ //loaders property is an array.
+        loaders: [ //loaders property is an array. It has diff. loaders in it, which are object. we have two here.
             {
-                test: /\.js$/,  //regular expression looking for any js file extenstion (or es2015)
-                include: path.resolve(__dirname, 'src'), //which directory to run on. We don't want it to run on all directories.
+                test: /\.js$/,  //regular expression looking for any js file extention (or es2015). it'll convert these to normal js.
+                include: path.resolve(__dirname, 'src'), //which directory to run on. We don't want it to run on all directories. Include the directory of path.resolve, current directory, then the source folder.
                 loader: 'babel-loader', //using the babel-loader
-                query: {
+                query: { //says which presets to use.
                     presets: ['react', 'es2015'] //you could just put react or just es2015.
                 }
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                loader: 'style-loader!css-loader' //these are piped together. couldn't tell if it was | or !
             }
         ]
     }
-};
-
-}
-
-
-
-COMPONENT
-
-ex: search component, directory component, signup component.
-
-
-
 
 ____________________________________________________________________________
-COMPONENT (2)
 
+COMPONENT
 A component is a reusable piece of code, which defines how certain features should look and behave on the UI (user interface). For example, a button is a component.
 
 Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
 
 You write code for all such components separately. Then combine those under one container, which in turn is a React component itself. This way you can create reusable components and your final app will be a collection of separate components working together.
 
+example:
+a button, search component, directory component, signup component.
 
-Functional Components (aka Stateless Components)
-- functions
+
+____________________________________________________________________________
+COMPONENT TYPES
+
+1. Functional Components (aka Stateless Components)
+
+eample...
 function Welcome(props) { return <h1>Hello, {props.name}</h1>; }
-This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. We call such components “functional” because they are literally JavaScript functions.
+
+This function is a valid React component because it accepts a single “props” ("properties") object argument with data and returns a React element. We call such components “functional” because they are literally JavaScript functions.
+
 Note: Always start component names with a capital letter.
+
 React treats components starting with lowercase letters as DOM tags. For example, <div /> represents an HTML div tag, but <Welcome /> represents a component and requires Welcome to be in scope.
 
 
-We’ve learned that a React app is a collection of various components, structured as a nested tree. Thus, we require some sort of mechanism to pass data from one component to other.
+2.
+
+
+We’ve learned that a React app is a collection of various components, structured as a nested tree. Thus, we require some sort of mechanism to pass data from one component to other. Those are props.
+
+
+____________________________________________________________________________
+COMPONENTS VOCABULARY
+
+React.Component — The way in which you create a new component.
+
+render (method) — Describes what the UI will look like for
+the particular component.
+
+ReactDOM.render — Renders a React component to a DOM node.
+
+
+Virtual DOM — A JavaScript representation of the actual
+DOM.
+
+
+constructor (this.state) - The way in which you establish
+the initial state of a component.
+
+
+
+state — The internal data store (object) of a component.
+
+
+setState — A helper method used for updating the state of a
+component and re-rendering the UI
+
+
+defaultProps — Allows you to set default props for your component.
+
+Component LifeCycle
+  - componentDidMount — Fired after the component mounted
+  - componentWillUnmount — Fired before the component will unmount
+  - getDerivedStateFromProps - Fired when the component mounts and
+whenever the props change. Used to update the state of a
+component when its props change
+
+____________________________________________________________________________
+
+Events
+  - onClick
+  - onSubmit
+  - onChange
 
 ____________________________________________________________________________
 
 PROPS
 We can pass arbitrary data to our component using a props object. Every component in React gets this props object.
+
+PROPS is The data which is passed to the child component
+from the parent component.
+
+propTypes — Allows you to control the presence, or types of
+certain props passed to the child component.
