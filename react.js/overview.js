@@ -180,10 +180,78 @@ Events
 ____________________________________________________________________________
 
 PROPS
+The data which is passed to the child component from the parent component.
 We can pass arbitrary data to our component using a props object. Every component in React gets this props object.
 
 PROPS is The data which is passed to the child component
 from the parent component.
+
+Handle state in the highest most parent component which needs to use the specific data, and if you have a child component that also needs that data, pass that data down as props.
+
+
+example 1...
+
+class HelloUser extends React.Component {
+  render() {
+    return (
+      <div> Hello, {this.props.name}</div>
+    )
+  }
+}
+
+//here, you have an attribute name with the value Tyler.
+//this.props.name is Tyler
+ReactDOM.render(<HelloUser name="Tyler"/>, document.getElementById('root'));
+
+
+example 2...
+
+//PARENT COMPONENT
+class FriendsContainer extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { //our initial state.
+      name: 'Tyler McGinnis',
+      friends: ['Jake Lingwall', 'Sarah Drasner', 'Merrick Christensen']
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h3> Name: {this.state.name} </h3>  //passes part of the initial state to this component.
+        <ShowList names={this.state.friends} /> //passes the friends part of the initial state to this component.
+      </div>
+    )
+  }
+}
+
+//CHILD COMPONENT
+class ShowList extends React.Component {
+  render() {
+    return (
+      <div>
+        <h3> Friends </h3>
+        <ul>
+        //map creates a new array, calls our callback function on each new array, & fills each new array with the results.
+          {this.props.names.map((friend) => <li>{friend}</li>)}
+        </ul>
+      </div>
+    )
+  }
+}
+
+//create a new array here...
+const friends = ['Jake Lingwall', 'Sarah Drasner', 'Merrick Christensen'];
+const listItems = friends.map((friend) => {
+  return "<li> " + friend + "</li>";
+});
+
+console.log(listItems);
+// ["<li> Jake Lingwall</li>", "<li> Sarah Drasner</li>", "<li> Merrick Christensen</li>"];
+
+
+____________________________________________________________________________
 
 propTypes — Allows you to control the presence, or types of
 certain props passed to the child component.
