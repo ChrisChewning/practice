@@ -6,11 +6,17 @@ Git/Github - clone v fork - Why is it useful? Why could it be dangerous?
 
     ____________________________________________________________________________
 
+CLONE =
 
+
+BRANCH =
+
+
+PULL REQUESTS =
+
+
+PUSH REQUESTS = 
 
 
 
     ____________________________________________________________________________
-
-
-    

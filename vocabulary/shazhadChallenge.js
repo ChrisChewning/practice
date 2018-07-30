@@ -170,17 +170,6 @@ STRING METHODS (all on MDN)
 
 
 
-ARRAY METHODS (https://javascript.info/array-methods)
-
-Add/remove items
-arr.push(...items) – adds items to the end,
-arr.pop() – extracts an item from the end,
-arr.shift() – extracts an item from the beginning,
-arr.unshift(...items) – adds items to the beginning.
-arr.splice()
-arr.splice(start, end) - a swiss army knife for arrays. It can do everything: add, remove and insert elements.
-arr.concat( , ) - joins the array with other arrays and/or items.
-
 
 
 
