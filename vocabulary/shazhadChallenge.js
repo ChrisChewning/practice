@@ -158,13 +158,26 @@ ____________________________________________________________________________
 
             - stack trace (understand which stack youre using and how it works = how they interact each other)
 
+
+MEAN stack, using node, express, angular, and mongodb
+
 ____________________________________________________________________________
 
 STRING METHODS (all on MDN)
 
 
 
-ARRAY METHODS
+ARRAY METHODS (https://javascript.info/array-methods)
+
+Add/remove items
+arr.push(...items) – adds items to the end,
+arr.pop() – extracts an item from the end,
+arr.shift() – extracts an item from the beginning,
+arr.unshift(...items) – adds items to the beginning.
+arr.splice()
+arr.splice(start, end) - a swiss army knife for arrays. It can do everything: add, remove and insert elements.
+arr.concat( , ) - joins the array with other arrays and/or items.
+
 
 
 
@@ -193,6 +206,8 @@ ____________________________________________________________________________
 
 THIS
 (https://javascript.info/object-methods)
+(https://codeburst.io/javascript-the-keyword-this-for-beginners-fb5238d99f85)
+
 this is a keyword, used a lot of times to find information in objects.
 The value of this is the object “before dot”, the one used to call the method.
 
@@ -210,12 +225,12 @@ let user = { //user object
 user.sayHi(); // John //instatiates the object (?)
 
 
+____________________________________________________________________________
 
             - scope
             - conditionals (if else), switch
             - Events
 
-            - this (https://codeburst.io/javascript-the-keyword-this-for-beginners-fb5238d99f85)
 
 ____________________________________________________________________________
 
@@ -258,18 +273,29 @@ HIGHER ORDER FUNCTIONS
 
 
 CALLBACKS
-A callback function, also known as a higher-order function, is a function that is passed to another function (let's call this other function “otherFunction”) as a parameter, and the callback function is called (or executed) inside the otherFunction.
+A callback function, also known as a higher-order function, is a function that is passed to another function as a parameter, and the callback function is called (or executed) inside the otherFunction.
 
 Note that the item in the click method's parameter is a function, not a variable.
 
-EXAMPLE 1:
+EXAMPLE 1: jQuery example
 $("#btn_1").click(function() {  //pass a function as a parameter to the click method. the click method will call (execute) the callback function we passed to it.
   alert("Btn 1 Clicked");
 });
 
-EXAMPLE 2:
 
 
+EXAMPLE 2: Node example
+const http = require('http');
+var server = http.createServer(function (request, response) {
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.end("Hello World\n");
+});
+server.listen(4000);
+
+^^^ Line 2, 3, 4: This function is a callback → We use the response variable that’s passed in to the callback to write the head and pass in the content type and we end that response with hello world. → This function returns an object that we are going to put in to our server variable and this object is going to have another function called “listen” →
+
+
+____________________________________________________________________________
 
 
             - constructors v classes
@@ -329,26 +355,111 @@ In functional programming...
 object oriented programming - Based on the concept of objects, which contains data(attributes) and procedures(methods). Significant object-oriented languages include C++, Java, PHP, C#, Python, Ruby, Swift etc.
 
 
-
-____________________________________________________________________________
-
-NODE STUFF
-
 ____________________________________________________________________________
 
 HTTP Server
 
-MVC (Models Views Controllers)***
-Models vs Schema
-Documents
+"Web server" can refer to hardware or software, or both of them working together.
+
+On the hardware side, a web server is a computer that stores web server software and a website's component files (e.g. HTML documents, images, CSS stylesheets, and JavaScript files). It is connected to the Internet and supports physical data interchange with other devices connected to the web.
+On the software side, a web server includes several parts that control how web users access hosted files, at minimum an HTTP server. An HTTP server is a piece of software that understands URLs (web addresses) and HTTP (the protocol your browser uses to view webpages). It can be accessed through the domain names (like mozilla.org) of websites it stores, and delivers their content to the end-user's device.
+
+At the most basic level, whenever a browser needs a file which is hosted on a web server, the browser requests the file via HTTP. When the request reaches the correct web server (hardware), the HTTP server (software) accepts request, finds the requested document (if it doesn't then a 404 response is returned), and sends it back to the browser, also through HTTP.
+
+Basic representation of a client/server connection through HTTP
+
+To publish a website, you need either a static or a dynamic web server.
+
+A static web server, or stack, consists of a computer (hardware) with an HTTP server (software). We call it "static" because the server sends its hosted files "as-is" to your browser.
+
+A dynamic web server consists of a static web server plus extra software, most commonly an application server and a database. We call it "dynamic" because the application server updates the hosted files before sending them to your browser via the HTTP server.
+
+For example, to produce the final webpages you see in the browser, the application server might fill an HTML template with contents from a database. Sites like MDN or Wikipedia have many thousands of webpages, but they aren't real HTML documents, only a few HTML templates and a giant database. This setup makes it easier and quicker to maintain and deliver the content.
+
+____________________________________________________________________________
+MODELS v. SCHEMA
+In mongoose, a schema represents the structure of a particular document, either completely or just a portion of the document. It's a way to express expected properties and values as well as constraints and indexes.
+
+A model defines a programming interface for interacting with the database (read, insert, update, etc). So a schema answers "what will the data in this collection look like?" and a model provides functionality like "Are there any records matching this query?" or "Add a new document to the collection".
 
 
-request, response (what is happening here?)
-req.body v req.params.id
+example...
+const mongoose = require('mongoose');
 
-next -
+const articleSchema = mongoose.Schema({  //this is the schema.
+  title: String,
+  body: String
+});
 
-callbacks -
+const Article = mongoose.model('Article', articleSchema); //this whole thing (file?) is the model.
+
+module.exports = Article;
+
+
+____________________________________________________________________________
+
+Schema
+A Mongoose ‘schema’ is a document data structure (or shape of the document) that is enforced via the application layer.
+
+Models
+‘Models’ are higher-order constructors that take a schema and create an instance of a document equivalent to records in a relational database.
+
+Documents - ‘Documents’ are equivalent to records or rows of data in SQL. While a SQL row can reference data in other tables, Mongo documents usually combine that in a document.
+
+____________________________________________________________________________
+
+REQ, RES
+req is an object containing information about the HTTP request that raised the event. In response to req, you use res to send back the desired HTTP response.
+
+
+REQ - HTTP(S) REQUEST OBJECT.
+The request will be an object with properties like these (just to name a few):
+
+request.url, which will be "/people.json" when this particular action is triggered
+
+request.method, which will be "GET" in this case, hence the app.get() call.
+
+An array of HTTP headers in request.headers, containing items like request.headers.accept, which you can use to determine what kind of browser made the request, what sort of responses it can handle, whether or not it is able to understand HTTP compression, etc.
+
+An array of query string parameters if there were any, in request.params (e.g. /people.json?foo=bar would result in request.params.foo containing the string "bar").
+
+
+
+RES - HTTP(S) RESPONSE OBJECT.
+The response back to the client browser.
+You can put new cookies value and that will write to the client browser (under cross domain rules)
+Once you res.send() or res.redirect() or res.render(), you cann do it again, otherwise, there will be uncaught error.
+
+____________________________________________________________________________
+
+REQ.BODY
+req.body properties come from a form post where the form data (which is submitted in the body contents) has been parsed into properties of the body tag. You want to get back what is on the body.
+
+Contains key-value pairs of data submitted in the request body. By default, it is undefined, and is populated when you use body-parsing middleware such as body-parser and multer.
+
+
+
+REQ.PARAMS
+req.params comes from path segments of the URL that match a parameter in the route definition such a /song/:songid. So, with a route using that designation and a URL such as /song/48586, then req.params.songid === "48586".
+
+This property is an object containing properties mapped to the named route “parameters”. For example, if you have the route /user/:name, then the “name” property is available as req.params.name. This object defaults to {}.
+
+
+
+____________________________________________________________________________
+
+
+NEXT
+https://stormpath.com/blog/how-to-write-middleware-for-express-apps
+
+var app = express();
+app.use(function(req,res,next)){
+    console.log("Request URL - "req.url);
+    next();
+}
+
+The above code would be executed for each request that comes in and would log the request url, the next() method essentially allows the program to continue. If the next() function is not invoked, the program would not proceed further and would halt at the execution of the middleware.
+
 ____________________________________________________________________________
 
 CRUD - Create Read Update Delete
@@ -418,3 +529,16 @@ Await lets you pause the execution of an async function until it receives the re
 ____________________________________________________________________________
 BLOCKING & NON-BLOCKING CODE
 https://www.tutorialspoint.com/nodejs/nodejs_callbacks_concept.htm
+
+-Blocking methods execute synchronously and non-blocking methods execute asynchronously. (see below for more details). Since node is event-driven you will have non-blocking methods.
+
+-Event Driven Programming (https:medium.com/@LindaVivah/the-beginners-guide-understanding-node-js-express-js-fundamentals-e15493462be1)
+
+is a computer programming paradigm in which control flow of the program is determined by the occurrence of events. These events are monitored by code known as an event listener that, if it detects that its assigned event has occurred, runs an event “handler”, typically a callback function or method. This handler deals with the event by responding to it with program code.
+
+If you look back at the server function, the response only runs once we get a request — that’s event driven programming:
+
+....
+var server = http.createServer(function (request, response) {
+....
+It doesn’t just happen automatically. There is a process that happens and you have to wait for that.

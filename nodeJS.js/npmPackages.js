@@ -28,7 +28,12 @@ All npm packages contain a file, usually in the project root, called package.jso
 
 ____________________________________________________________________________
 
-Middleware
+MIDDLEWARE
+middleware — Express middleware, which processes the incoming requests before handling them down to the routes.  Middleware is any number of functions that are invoked by the Express.js routing layer before your final request handler is, and thus sits in the middle between a raw request and the final intended route. It basically lets you configure how your express application works.
+
+
+
+
     body-parser
     method-override
 
