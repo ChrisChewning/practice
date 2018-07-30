@@ -154,13 +154,16 @@ Whenever possible, you should use triple equals to test equality. By testing the
 Type coercion can have some crazy rules involved (as I’ve shown above). Unless you’re very familiar with JavaScript, double equals can lead to more trouble and headaches than it’s worth. Knowing the six falsy values can go a long way to determining why something is evaluating to true or false.
 
 ____________________________________________________________________________
+STACK TRACE
 
 
-            - stack trace (understand which stack youre using and how it works = how they interact each other)
+Node: Server-side Javascript.
+Express: Framework that runs over Node.
+React:
+MongoDb: Where the data is stored.
 
-
-MEAN stack, using node, express, angular, and mongodb
-
+MEAN stack: Node, Express, Angular, and MongoDb
+MERN stack: Node, Express, React, MongodDb
 ____________________________________________________________________________
 
 STRING METHODS (all on MDN)
@@ -211,7 +214,7 @@ THIS
 this is a keyword, used a lot of times to find information in objects.
 The value of this is the object “before dot”, the one used to call the method.
 
-
+example 1...
 let user = { //user object
   name: "John", //key: value pair
   age: 30,
@@ -221,15 +224,102 @@ let user = { //user object
   }
 
 };
-
 user.sayHi(); // John //instatiates the object (?)
+
+
+
+
+example 2...
+var myFunction = function () {
+  console.log(this); // this = global, [object Window]
+};
+myFunction();
+
+var myObject = {};
+myObject.myMethod = function () {
+  console.log(this); // this = Object { myObject }
+};
+
+var nav = document.querySelector('.nav'); // <nav class="nav">
+var toggleNav = function () {
+  console.log(this); // this = <nav> element
+};
+nav.addEventListener('click', toggleNav, false);
+
+
 
 
 ____________________________________________________________________________
 
-            - scope
-            - conditionals (if else), switch
-            - Events
+SCOPE
+JavaScript has two scopes – global and local. Any variable declared outside of a function belongs to the global scope, and is therefore accessible from anywhere in your code. Each function has its own scope, and any variable declared within that function is only accessible from that function and any nested functions.
+
+lexical scope
+Whenever you see a function within another function, the inner function has access to the scope in the outer function, this is called Lexical Scope or Closure - also referred to as Static Scope. The easiest way to demonstrate that again:
+
+// Scope A
+var myFunction = function () {
+  // Scope B
+  var name = 'Todd'; // defined in Scope B
+  var myOtherFunction = function () {
+    // Scope C: `name` is accessible here!
+  };
+};
+
+
+
+____________________________________________________________________________
+
+EVENTS
+- HTML events are "things" that happen to HTML elements.
+- When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+
+- Event handlers can be used to handle, and verify, user input, user actions, and browser actions:
+
+* Things that should be done every time a page loads
+* Things that should be done when the page is closed
+* Action that should be performed when a user clicks a button
+* Content that should be verified when a user inputs data
+
+HTML event attributes can execute JavaScript code directly
+HTML event attributes can call JavaScript functions
+You can assign your own event handler functions to HTML elements
+You can prevent events from being sent or being handled
+And more ...
+
+
+Common HTML Events
+
+onchange:	An HTML element has been changed
+onclick //when a user clicks something
+onkeydown:	The user pushes a keyboard key
+onload:	The browser has finished loading the page
+onmouseover //when a user mouses over something
+onmouseout //The user moves the mouse away from an HTML element
+onfocus //when a user puts the cursor in a form field
+onblur //When a user leaves a form field
+
+example...
+<button onclick="this.innerHTML = Date()">The time is?</button>
+
+
+REAL WORLD EXAMPLE...
+
+Timers
+You can add events that have a time delay. For example, if you want a pop-up message to appear after the user has been on the page for 10 seconds, you can do this through the setTimeOut method.
+
+For example, lets say you have a simple message:
+
+function welcomeVisitor() {
+alert("Welcome to the site");
+}
+However, you dont want this message to appear until the user has been on the page for a while. You delay the action through the setTimeOut function:
+
+setTimeOut(welcomeVisitor,8000);
+The setTimeOut function has two parameters. The first allows you to call a function (which we declared earlier), and the second refers to the timer. The function will not be called for 8000 milliseconds.
+
+There are other timer functions, such as setInterval, that initiate the function at the interval you specify.
+
 
 
 ____________________________________________________________________________
@@ -272,6 +362,10 @@ HIGHER ORDER FUNCTIONS
 (map, filter, reduce etc..)
 
 
+
+____________________________________________________________________________
+
+
 CALLBACKS
 A callback function, also known as a higher-order function, is a function that is passed to another function as a parameter, and the callback function is called (or executed) inside the otherFunction.
 
@@ -297,11 +391,60 @@ server.listen(4000);
 
 ____________________________________________________________________________
 
+CLASS
+- A class is like a blueprint — a description of the object to be created.
+- class syntax allows usage of additional keywords such as extends and super for extending other classes
 
-            - constructors v classes
-            - prototype chain
-            - algorithms
+- When an object is created from a class, that object is said to be an instance of the class.
 
+class Person {
+constructor(name, age) {
+this.name = name
+this.age = age
+   }
+}
+
+
+CONSTRUCTOR - An ordinary js function that has the logic needed to create a new object instead of regular program logic. It helps you mass produce objects.
+
+Instances are typically instantiated via constructor functions with the `new` keyword.
+
+//is this a constructor?
+function Pet(name, species, hello){
+    this.name = name;
+    this.species = species;
+    this.hello = hello;
+    this.sayHello = function()
+    {
+        alert(this.hello);
+    }
+}
+
+PROTOTYPE CHAIN
+
+normally described as a chain going downwards, with null at the very top and the object we’re using at the bottom.
+
+When performing a lookup, the engine will traverse up the chain looking for the property and return the first one it finds, or undefined if it’s not present in the prototype chain.
+
+
+var obj = {};
+obj.__proto__.testValue = 'Hello!';
+console.log(obj); // -> {}
+console.log(obj.testValue); // -> Hello!
+This prototype chain is depicted below.
+
+__proto__ === null
+|
+|
+__proto__ === Object.prototype -> testValue: 'Hello!'
+|
+|
+obj
+When we log obj, we get an empty object because the property testValue isn’t present directly on the object. However, logging obj.testValue triggers a lookup. The engine goes up the prototype chain and finds testValue present on the object’s prototype and we see that value printing out.
+
+
+
+JavaScript’s class inheritance uses the prototype chain.
 
 ____________________________________________________________________________
 
@@ -310,7 +453,7 @@ ____________________________________________________________________________
 
 - jquery
 a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. ... The modular approach to the jQuery library allows the creation of powerful dynamic web pages and Web applications.
-It simplifies event handling, HTML document traversing, Ajax interactions and animation for speedy website development. jQuery simplifies the HTML's client-side scripting, thus simplifying Web 2.0 applications development.
+It simplifies event handling, HTML document traversing, Ajax interactions and animation for speedy website development. jQuery simplifies the HTMLs client-side scripting, thus simplifying Web 2.0 applications development.
 
 
 - bootstrap (https://getbootstrap.com/docs/3.3/css/)

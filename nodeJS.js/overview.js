@@ -1,38 +1,6 @@
 https://medium.com/createdd-notes/starting-with-authentication-a-tutorial-with-node-js-and-mongodb-25d524ca0359
 
 
-
-____________________________________________________________________________
-
-NPM (Node Package Manager)
-The official package manager for Node and is bundled & installed automatically with the environment. NPM is full of modules.
-
-These are libraries built by the awesome community which will solve most of your generic problems. npm (Node package manager) has packages you can use in your apps to make your development faster and efficient.
-json always has double quotes. It never has single quotes.
-First thing: in your terminal type git init
-module: a smaller package of information that will be used in a larger package.
-
-____________________________________________________________________________
-
-NODE MODULES
-All the packages that are installed that your app uses.
-
-Modules are the fundamental building blocks of the code structure. The module system allows you to organize your code, hide information and only expose the public interface of a component using module.exports. Every time you use the require call, you are loading another module.
-
-____________________________________________________________________________
-
-HOW TO USE NODE MODULES...
-REQUIRE
-The module loading mechanism in Node.js is caching the modules on the first require call. It means that every time you use require('awesome-module') you will get the same instance of awesome-module, which ensures that the modules are singleton-like and have the same state across your application.
-
-Require will let us do 3 things:
-
-load in modules that come with Node.js — example: http module, FS module
-load in third party libraries that allows us to write less code — example: express.js
-require our very own files. This will allow us to break up our application to multiple smaller files which is essential for building real-world apps.
-
-____________________________________________________________________________
-
 NODE
 a JavaScript free and open source cross-platform for server-side programming that allows users to build network applications quickly. It is a runtime environment that allows us to build server applications or computer applications using js. JS was originally built for the web but then node came along and allowed us to build servers.
 
@@ -85,8 +53,36 @@ Exports is when you export it to another file so the other file can use it.
 
 ____________________________________________________________________________
 
-NPM
-the 'largest ecosystem of open source libraries in the world.'
+NPM (Node Package Manager)
+The official package manager for Node and is bundled & installed automatically with the environment. NPM is full of modules. The 'largest ecosystem of open source libraries in the world.'
+
+These are libraries built by the awesome community which will solve most of your generic problems. npm (Node package manager) has packages you can use in your apps to make your development faster and efficient.
+json always has double quotes. It never has single quotes.
+First thing: in your terminal type git init
+module: a smaller package of information that will be used in a larger package.
+
+____________________________________________________________________________
+
+NODE MODULES
+All the packages that are installed that your app uses.
+
+Modules are the fundamental building blocks of the code structure. The module system allows you to organize your code, hide information and only expose the public interface of a component using module.exports. Every time you use the require call, you are loading another module.
+
+____________________________________________________________________________
+
+HOW TO USE NODE MODULES...
+REQUIRE
+The module loading mechanism in Node.js is caching the modules on the first require call. It means that every time you use require('awesome-module') you will get the same instance of awesome-module, which ensures that the modules are singleton-like and have the same state across your application.
+
+Require will let us do 3 things:
+
+load in modules that come with Node.js — example: http module, FS module
+load in third party libraries that allows us to write less code — example: express.js
+require our very own files. This will allow us to break up our application to multiple smaller files which is essential for building real-world apps.
+
+____________________________________________________________________________
+
+
 
 ____________________________________________________________________________
 

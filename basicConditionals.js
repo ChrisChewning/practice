@@ -1,11 +1,76 @@
 
+CONDITIONALS
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals
+
+IF ELSE IF ELSE STATEMENTS
+if () {
+} else if () [
+] else {
+}
+
+
+let person = {
+  name: 'tony',
+  age: 20,
+  driver: null
+};
+
+const isTony = () => {
+if (person.age >=21) {
+  return 'not tony'
+} else if (person.age <21) {
+  return 'tony'
+}
+}
+console.log(isTony(person)); //logs tony
+
+
+NESTED IF ELSE STATEMENTS (https://www.thoughtco.com/javascript-making-decisions-2037427)
+
+var answer; //GLOBAL VARIABLE
+if (a == b) { //IF A == B THEN CHECK IF A == C
+  if (a == c) { //NESTED CONDITION
+    answer = "all are equal";
+  } else { //IF A == B AND A !== C
+    answer = "a and b are equal";
+  }
+} else { //IF A IS NOT == B THEN CHECK...
+  if (a == c) {  //CHECK IF A == C
+    answer = "a and c are equal";
+  } else {
+    if (b == c) { //CHECK IF B == C
+      answer = "b and c are equal";
+    } else { //IF A !== B && B == C ...
+      answer = "all are different";
+    }
+  }
+}
+
+
+____________________________________________________________________________
+
+TERNARY OPERATOR (https://codeburst.io/javascript-the-conditional-ternary-operator-explained-cac7218beeff)
+
+syntax: condition ? value if true : value if false
+
+The condition is what you’re actually testing. The result of your condition should be true or false or at least coerce to either boolean value.
+A ? separates our conditional from our true value. Anything between the ? and the : is what is executed if the condition evaluates to true.
+Finally a : colon. If your condition evaluates to false, any code after the colon is executed.
+
+
+let person = {
+  name: 'tony',
+  age: 20,
+  driver: null
+};
+person.driver = person.age >=16 ? 'Yes' : 'No';
+                  //condition   ? val if true : val if false
+
+
+
+____________________________________________________________________________
+
 SWITCH STATEMENT
-
-
-
-4. Switch cases use strict comparison (===).
-
-
 
 EXAMPLE 1:
 const getFruitByColor = (color) => {
@@ -88,7 +153,7 @@ console.log(text);
 
 
 
-EXAMPLE 4: Strict equality.  ALSO: The default doesnt have to be at the end.
+EXAMPLE 4: Switch cases use strict comparison (===). ALSO: The default doesnt have to be at the end.
 
 function electricity () {
 switch (lights) {
