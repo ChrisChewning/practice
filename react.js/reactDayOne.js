@@ -33,11 +33,10 @@ ____________________________________________________________________________
 
 HOW TO START
 
-1. npm install -g react... //this installs it globally. don't need to do this any more.
-2.
-3. cd into the folder that was just made.
-4. npm start (calls the scripts start: "react-scripts start"). this pulls up localhost: 3000 on our browser with the spinning logo automatically.
-5. atom .
+1. npm install //-g react would install it globally but you don't need to do this any more since you Dled it on your laptop.
+2. cd into the folder that was just made.
+3. npm start (calls the scripts start: "react-scripts start"). this pulls up localhost: 3000 on our browser with the spinning logo automatically.
+4. atom .
 
 
 WEBPACK

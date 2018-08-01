@@ -19,7 +19,6 @@ Explanation:
 2. The “HTML” that you’re writing in the render method isn’t actually HTML but it’s what React is calling “JSX”. JSX simply allows us to write HTML like syntax which (eventually) gets transformed to lightweight JavaScript objects. React is then able to take these JavaScript objects and from them form a “virtual DOM” or a JavaScript representation of the actual DOM. This creates a win/win situation where you get the accessibility of templates with the power of JavaScript.
 
 
-
 3. The virtual DOM is a JavaScript representation of the actual DOM, React can keep track of the difference between the current virtual DOM(computed after some data changes), with the previous virtual DOM (computed befores some data changes).
 
 4. Because manipulating the actual DOM is slow, React is able to minimize manipulations to the actual DOM by keeping track of a virtual DOM and only updating the real DOM when necessary and with only the necessary changes. (More info here).
