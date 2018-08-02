@@ -87,7 +87,7 @@ link: https://git.generalassemb.ly/WebDev-Connected-Classroom/intro-react-part-d
 1. you cannot log inside your return statement. It has to be above it, inside the render(){}
 
 
-2.
+2. Props is 
 <div>
   <h1>Hello, {this.props.name}</h1>
   <p>How are {this.props.query}</p>
@@ -103,5 +103,6 @@ in a video game you have lives, health, points, etc. If you lose a life or gain 
 
 
 5. BINDING THIS
-handleClick = (e) => { //arrow functions automatically bind to this for you. do not put handleClick. if you do that this.setState() will be set to undefinded bc this isn't bound.
-//this.handleClick = this.handleClick.bind(this); is what you may see in documentation.
+handleClick = (e) => { //arrow functions automatically bind to this for you. do not put handleClick without an arrow function. if you do that this.setState() will be set to undefinded bc this isn't bound.
+
+//this.handleClick = this.handleClick.bind(this); is what you may see in documentation. that is b.c it is not bound through an arrow function first.

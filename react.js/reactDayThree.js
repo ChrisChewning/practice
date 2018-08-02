@@ -1,6 +1,18 @@
 
 //SPREAD OPERATOR IN A TODO LIST https://medium.com/@thejasonfile/using-the-spread-operator-in-react-setstate-c8a14fc51be1
 
+//=============Google Maps API Stuff ===============
+
+1. https://www.npmjs.com/package/google-maps-react
+2. https://medium.com/@yelstin.fernandes/render-a-map-component-using-react-google-maps-5f7fb3e418bb
+
+
+
+1. STATE v. SETSTATE
+https://medium.freecodecamp.org/understanding-setstate-in-react-ea8982168b49
+
+
+
 1. Properties are like "variables attached to classes/objects."
 
 2. Ajax call is a call to an API. jQuery uses ajax.

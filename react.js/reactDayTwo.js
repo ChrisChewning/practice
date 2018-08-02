@@ -13,6 +13,7 @@ ex: when you login, you want to be taken to a new screen.
 - Only thing to define inside the constructor is the state.
 - Dont define function inside the render
 - render can be above things (order doesn't matter) but it's nice to have it as the last code block.
+
 - To write javascript inside a return statement you have to wrap it in brackets {}
 
 -to access any value, use state. This gives you that value at any given time.
@@ -36,7 +37,7 @@ Stateless components
 
 4. API LifeCycle Methods
 you have 3:
-Constructor, componentDidMount and Render.
+Constructor, componentDidMount and Render. 
 
 
 5. SUPER & INHERITING CLASSES
