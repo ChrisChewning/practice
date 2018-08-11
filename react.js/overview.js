@@ -313,7 +313,7 @@ class HelloUser extends React.Component {
   render() {
     return (
       <div>
-        Hello {this.state.username} <br /> //refers to the username: e.target.value listener.
+        Hello {this.state.username} <br /> //refers to the username: e.target.value //listener.
         Change Name: //what you'll see on the screen.
         <input
           type="text"  //just like html
@@ -327,7 +327,7 @@ class HelloUser extends React.Component {
 
 
 1. HANDLE CHANGE METHOD
-This method is going to get called every time a user types in the input box. When handleChange is called, it’s going to call setState to re-define our username withw hatever was typed into the input box (e.target.value). Remember, whenever setState is called, React creates a new virtual DOM, does the diff, then updates the real DOM.
+This method is going to get called every time a user types in the input box. When handleChange is called, it’s going to call setState to re-define our username with hatever was typed into the input box (e.target.value). Remember, whenever setState is called, React creates a new virtual DOM, does the diff, then updates the real DOM.
 
 2. onChange is a React attribute and it will call whatever method you specify every time the value in the input box changes, in this case the method we specified was handleChange.
 

@@ -15,7 +15,8 @@ https://medium.freecodecamp.org/understanding-setstate-in-react-ea8982168b49
 
 1. Properties are like "variables attached to classes/objects."
 
-2. Ajax call is a call to an API. jQuery uses ajax.
+2. AJAX
+Ajax call is a call to an API. jQuery uses ajax.
 Ajax is a client-side script that communicates to and from a server/database without the need for a postback or a complete page refresh. The best definition I've read for Ajax is “the method of exchanging data with a server, and updating parts of a web page – without reloading the entire page.”
 
 
@@ -31,7 +32,7 @@ ex1 Array: const newArray = [...oldArray, 1,2]
 //ex2 {} is an object. you create a new object with a new property that has a key value pair.
 ex 2 Object: const newObject = {...oldObject, newProp: 5}
 
-3. Rest Operator
+3. Rest Operator is for objects and does the opposite(?)
 
 
 

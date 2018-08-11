@@ -2,11 +2,15 @@
 
 *create your folder setup and server.js file, which is not in a folder.
 
-1. npm init. This comes first. It creates your package.json. This is the file that lets us know what dependencies we are using in this project.
+1. Make files and folders for everything first.
 
-2. npm install express. This allows us to create the server. Check it’s in the package.json file.
+2. git init.
 
-3. NPM install ejs, mongoose, method-override, body-parser, etc., etc.
+2. npm init. This comes first. It creates your package.json. This is the file that lets us know what dependencies we are using in this project.
+
+3. npm install express. This allows us to create the server. Check it’s in the package.json file.
+
+4. NPM install ejs, mongoose, method-override, body-parser, etc., etc.
 
 NOTE: Don’t need to install nodemon b.c it’s globally installed. This allows the server to keep updating when you add information in your files.
 

@@ -86,14 +86,39 @@ link: https://git.generalassemb.ly/WebDev-Connected-Classroom/intro-react-part-d
 
 1. you cannot log inside your return statement. It has to be above it, inside the render(){}
 
+2. We call such components “functional” because they are literally JavaScript function
 
-2. Props is 
+3. Props (properties) is used whenever you want immutable data.
+
+When we need immutable data in our component, we can just add props to reactDOM.render() function in main.js and use it inside our component.
+
+App.jsx
+import React from 'react';
+
+class App extends React.Component {
+   render() {
+      return (
+         <div>
+            <h1>{this.props.headerProp}</h1>
+            <h2>{this.props.contentProp}</h2>
+         </div>
+      );
+   }
+}
+export default App;
+
+
+
+
 <div>
   <h1>Hello, {this.props.name}</h1>
   <p>How are {this.props.query}</p>
   <p>Do you like {this.props.animal}</p>
   <img src={this.props.img}/>
 </div>
+
+
+
 
 3. State is the representation of what your data is at any point in time. example...
 in a video game you have lives, health, points, etc. If you lose a life or gain points, etc. you change state.

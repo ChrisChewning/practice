@@ -30,3 +30,9 @@ to enable CORS
 
 POSTMAN
 Allows you to simulate http server requests. There is no need for front end to test. Just testing if API is sending what we are asking for.
+
+
+BEST PRACTICE
+1. scope your api in an 'api' namespace.
+2. version your api
+https://www.comedyvideos.com/api/v2/videos

@@ -16,3 +16,4 @@ Map
 
 
 http://mongoosejs.com/docs/guide.html
+LINK: http://mongoosejs.com/docs/schematypes.html

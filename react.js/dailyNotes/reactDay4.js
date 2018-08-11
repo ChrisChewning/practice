@@ -1,6 +1,38 @@
+INSIGHTS
+
+
+1. for forms:
+- onClick   onChange={props.handleFormChange} or onChange={this.handleFormChange}. These were both functions?
+
+- Inputs should return a value via an onChange method,
+
+-onSubmit
+
+
+2. FOR LOGIN FORMS:
+when you login, you want to set the state. you have already made the state before and set them to either a name, empty, or a boolean.
+
+example...
+login = (username) => {
+    console.log('the login function in app is working', username);
+    this.setState({ //calling a re-render of all the properties that have changed. this setState is called in the login component.
+      username: username,
+      logged: true //when they submit the form, change logged from false to true.
+    })
+}
+
+3. TO SHOW WHAT IS ON THE SCREEN?
+//e.target.value is whatever the value it is we're typing in.
+// //   this.setState({username: e.target.value})
+
+
+3. TERNARY OPERATOR:
+example...
+  {this.state.logged  ? <MainContainer username={this.state.username} /> : <Login login={this.login} />}
+
 
 Goal 1: Understand Props
- Props are similar to passed arguments to a function.
+ Props are similar to passed arguments to a fn.
 
 
  You can define Props on your component just like you are setting a HTML attribute. Like we defined heading and subtitle above and then you can access them in your component by using this.props provided by React.
@@ -10,15 +42,12 @@ Goal 1: Understand Props
  <MyHeading heading={1+1} subtitle={"this is a "+"subtitle"} />
  heading output will be 2
 
-
-
-
-
+//==================================================================
 
 Goal 2: understand how to render out properties.
 
 To write javascript inside a return statement you have to wrap it in brackets {}
-So far we have returend inside our render function:
+So far we have returned inside our render function:
 
 1. component < ... />
 2. className =
@@ -26,8 +55,6 @@ So far we have returend inside our render function:
 4. your map key
 5. your data from an API (quake.properites.title below)
 example... <li key={i}> {quake.properties.title} </li>
-
-
 
 
 
@@ -63,4 +90,13 @@ class MyComponent extends React.Component {
   }
 }
 
-example 2...
+
+
+
+
+
+//========================================================
+
+Cross-origin resource sharing (CORS) = Middleware so any client can make a request to our server.
+
+It is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served. ... The current actively-maintained specification that defines CORS is the Fetch Living Standard.

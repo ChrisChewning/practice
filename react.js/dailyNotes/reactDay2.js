@@ -1,4 +1,51 @@
 
+props
+What are .props?
+Properties! Every component has .props
+
+Properties are immutable. That is, they cannot be changed while your program is running. Like const!
+We define properties in development and pass them in as attributes to the JSX element in our .render method.
+First we can pass multiple properties to our component when its rendered in src/index.js..
+
+import ReactDOM from `react-dom`
+import Hello from './App.js'
+
+ReactDOM.render(
+  <Hello name={"Nick"} age={24} />, //YOU HAVE TO PUT {} in the render method.
+  document.getElementById('root')
+)
+Then in our component definition we have access to both values...
+
+class Hello extends Component {
+  render () {
+    return (
+      <div>
+        <h1>Hello {this.props.name}</h1>
+        <p>You are {this.props.age} years old</p>
+      <div>
+    )
+  }
+}
+NOTE: The return statement in render can only return one DOM element. You can, however, place multiple elements within a parent DOM element, like we do in the previous example with <div>.
+
+
+============================================================================
+
+STATE
+  Values stored in a component's state are mutable attributes.
+
+  Like properties, we can access state values, val for example, using this.state.val
+  Setting up and modifying state is not as straightforward as properties. It involves explicitly declaring the mutation, and then defining methods to define how to update our state....
+
+
+
+
+
+  ============================================================================
+
+
+
+
 OUR GOALS TODAY
 
 1. HOW TO INTERACT WITH FORMS.
@@ -37,7 +84,7 @@ Stateless components
 
 4. API LifeCycle Methods
 you have 3:
-Constructor, componentDidMount and Render. 
+Constructor, componentDidMount and Render.
 
 
 5. SUPER & INHERITING CLASSES
