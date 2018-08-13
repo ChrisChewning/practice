@@ -15,6 +15,7 @@ function sumTwoSmallestNumbers(numbers) {
 console.log(sumTwoSmallestNumbers([2,3,7,10]));  //5
 
 
+
 //SUM THE TWO LARGEST
 function sumTwoLargestNumbers(numbers) {
   numbers = numbers.sort(function(a, b) {
