@@ -252,3 +252,8 @@ command-line
 3
 4
 5
+
+
+//============================== DOC STRINGS ==========================
+
+Lines between triple quotes (''' or """) are called docstrings – you can write them at the top of a file, class or method to describe what it does. They won't be run by Python.

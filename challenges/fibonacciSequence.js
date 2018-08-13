@@ -4,8 +4,25 @@
 
 
 
+//SOLUTION 1
 
 
+  let a = 0;
+  let b = 1;
+  let result = b; //result = b okay?
+
+for (var i=1; i < 7; i++) {
+  // console.log();
+  result = a + b;
+  a=b;
+  b=result;
+}
+console.log(result);
+
+
+
+
+// SOLUTION 2
 let fibonacci = (num) => {
   var a = 1, b = 0, temp; //same as: var a = 1; var b = 0; var temp;
   while (num >= 0){

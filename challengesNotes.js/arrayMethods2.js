@@ -89,4 +89,10 @@ elements.map(function(element) {
 }); // [8, 6, 7, 9]
 
 
+ex3:
+const map1 = array1.map(x => x * 2);
+
+
+//Key value pairs in map is for iterating over objects inside an array.
+
 --------------------------------------------------------------------------------

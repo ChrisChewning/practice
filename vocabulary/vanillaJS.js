@@ -16,6 +16,12 @@ If we want to model a cat, we will create an object Cat that has some properties
 
 Then the Cat has some actions: purr, scratch, or feed (in which case, we will give the cat some CatFood, which could be a separate object with properties, like taste).
 
+
+Objects are not a primitive data Type.
+
+An object is a collection of properties. These properties are stored in key/value pairs. Properties can reference any type of data, including objects and/or primitive values.
+
+
 Cat
 --------
 color
@@ -65,10 +71,3 @@ String
 Null
 Undefined
 Symbol
-
-
-
-OBJECTS
-Objects are not a primitive data Type.
-
-An object is a collection of properties. These properties are stored in key/value pairs. Properties can reference any type of data, including objects and/or primitive values.

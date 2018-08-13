@@ -24,6 +24,13 @@ arr.splice(start, how many) - a swiss army knife for arrays. It can do everythin
 
 
 
-MAP OVER ITEMS 
+MAP OVER ITEMS
+.map()
 
-FILTER ITEMS
+
+FILTER ITEMS create a new array.
+.filter()
+
+
+REDUCE ITEMS 
+.reduce()
