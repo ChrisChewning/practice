@@ -19,6 +19,6 @@ console.log(filterPassingGrades(grades));
 
 let gradesReal = [80, 85, 0, 70, 20, 22, 23, 90, 100, 120]
 function filterPassingGrades(grades) {
-  return grades.filter(grade => grade > 70)
+  return grades.filter(grade => grade > 70) //this has a built in 'return' to it. 
 }
 console.log(filterPassingGrades(gradesReal));
