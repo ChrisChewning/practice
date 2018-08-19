@@ -28,6 +28,8 @@ are sibling folders. You also have manage.py as a sibling file and requirements.
 
 #========================  RUN YOUR VIRTUAL ENVIRONMENT ==================
 
+*NOTE: If you run your server from another terminal tab after setup, set up your virtual environment again, then install pip3 install django and pip3 install psycopg2.
+
 STEP 1: VIRTUAL ENVIRONMENT
 source .env/bin/activate in your main root folder. THIS IS IMPORTANT.
 
@@ -103,6 +105,39 @@ DATABASES = {
 4. Include your app in the INSTALLED_APPS
 
 
+example...
+
+postgres=# \q  (\q quits your sql)
+Chriss-MacBook-Air:showtime_django chris$ psql  #(gets into your sql)
+
+chris=# \c showtime  (connects to your database now)
+You are now connected to database "showtime" as user "chris".
+showtime=# \dt  (shows your tables)
+                     List of relations
+ Schema |            Name            | Type  |    Owner
+--------+----------------------------+-------+--------------
+ public | auth_group                 | table | showtimeuser
+ public | auth_group_permissions     | table | showtimeuser
+ public | auth_permission            | table | showtimeuser
+ public | auth_user                  | table | showtimeuser
+ public | auth_user_groups           | table | showtimeuser
+ public | auth_user_user_permissions | table | showtimeuser
+ public | django_admin_log           | table | showtimeuser
+ public | django_content_type        | table | showtimeuser
+ public | django_migrations          | table | showtimeuser
+ public | django_session             | table | showtimeuser
+ public | showtime_actor             | table | showtimeuser
+ public | showtime_show              | table | showtimeuser
+(12 rows)
+
+showtime=#
+
+
+
+
+
+
+
 #==============================   RUN YOUR SERVER   ==========================
 
 python3 manage.py runserver
@@ -168,7 +203,7 @@ class Song(models.Model): #inherit the models class
 
     #parameter 1: the foreign key links to the artist class. creates this manually here for postgres.
 
-    #parameter 2: on_delete=models.CASCADE  means if you delete this song database it'll delete any children related to that.
+    #parameter 2: on_delete=models.CASCADE  means if you delete this song database it'll delete any children related to that. Basically, if you delete an artist all of its songs (children data) will be deleted.
 
     #related_name is how the model will be referred to in relation to its parent (Artist)
 

@@ -1,7 +1,19 @@
-
+LINKS: FLEXBOX
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 CENTERING THINGS IN A COLUMN. (ex: text, text, image)
 text-align: center;
+
+
+CENTERING navbar.
+
+ul/li in html or react.
+2. className ul {
+  background-color: yellow;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
 
 
 CENTERING TWO THINGS SIDE-BY-SIDE

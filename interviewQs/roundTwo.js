@@ -29,6 +29,8 @@ Draw out the MVC framework and explain what happens when the client fills out a 
 Models - schemas, how things will be structured to look in the end.
 Views - ejs in express, templates in django.
 Controllers - The actual routes.
+"The controller encapsulates the logic for processing requests and returning responses. In the traditional MVC architecture there is the Model, the View, and the Controller."
+
 
 
 When you submit a form it has to link up with the model.
@@ -99,8 +101,9 @@ map() - map uses a callback to return a new array.in react, you have 2 parameter
 
 reduce() - reduce uses a callback to reduce the array to one single value. It takes in two arguments, sum and element. sum is the last returned value and element is the element you are adding or subtracting or whatever.
 
+forEach() -
 
-
+EXAMPLES
 
 filter example...
 //es5

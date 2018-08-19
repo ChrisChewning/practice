@@ -1,6 +1,6 @@
 
 REACT
-Javascript libraray (not framework) for creating user interfaces. These can be full, single-page applications or certain parts of websites (i.e. search form).
+Javascript library (not framework) for creating user interfaces. These can be full, single-page applications or certain parts of websites (i.e. search form).
 
 React was created by Jordan Walke, a software engineer at Facebook. He was influenced by XHP, an HTML component framework for PHP.[8] It was first deployed on Facebooks newsfeed in 2011 and later on Instagram.com in 2012.[9] It was open-sourced at JSConf US in May 2013.
 

@@ -92,7 +92,10 @@ link: https://git.generalassemb.ly/WebDev-Connected-Classroom/intro-react-part-d
 
 When we need immutable data in our component, we can just add props to reactDOM.render() function in main.js and use it inside our component.
 
-App.jsx
+
+//EXAMPLE
+In your App.js file (where your imports and routes will go later)
+
 import React from 'react';
 
 class App extends React.Component {
@@ -106,8 +109,6 @@ class App extends React.Component {
    }
 }
 export default App;
-
-
 
 
 <div>

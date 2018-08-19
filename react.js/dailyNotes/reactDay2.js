@@ -11,7 +11,7 @@ import ReactDOM from `react-dom`
 import Hello from './App.js'
 
 ReactDOM.render(
-  <Hello name={"Nick"} age={24} />, //YOU HAVE TO PUT {} in the render method.
+  <Hello name={"Nick"} age={24} />, //YOU HAVE TO PUT {} if you are inside the render method.
   document.getElementById('root')
 )
 Then in our component definition we have access to both values...
@@ -26,7 +26,7 @@ class Hello extends Component {
     )
   }
 }
-NOTE: The return statement in render can only return one DOM element. You can, however, place multiple elements within a parent DOM element, like we do in the previous example with <div>.
+NOTE: The return statement IN render can only return one DOM element. You can, however, place multiple elements within a parent DOM element, like we do in the previous example with <div>.
 
 
 ============================================================================
@@ -58,7 +58,7 @@ ex: when you login, you want to be taken to a new screen.
 
 
 - Only thing to define inside the constructor is the state.
-- Dont define function inside the render
+- Don\'t define function inside the render
 - render can be above things (order doesn't matter) but it's nice to have it as the last code block.
 
 - To write javascript inside a return statement you have to wrap it in brackets {}
