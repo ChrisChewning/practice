@@ -4,6 +4,9 @@ CSS TRICKS  https://www.webdesignerdepot.com/2016/10/20-essential-css-tricks-eve
 Z-INDEX
 specifies the stack order of an element. A number with a greater z-index will be out front. example: if an image has a z-index of -1, it will be placed behind a heading.
 
+https://stackoverflow.com/questions/14391208/how-does-z-index-really-work
+
+
 FLEXBOX
 The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
