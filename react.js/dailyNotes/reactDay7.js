@@ -39,7 +39,7 @@ const loginResponse = await fetch('http://localhost:9000/auth/login', {
         'Content-Type': 'application/json'
         }
     });
-
+}
 
 // ======================= LOGIN DATA ========================
 //STEP 1 above was to fetch a post request to the server.
