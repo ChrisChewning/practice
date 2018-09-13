@@ -86,7 +86,11 @@ DIRECTIVES
 
 two main kinds:
 1. attribute: interact wiht the element it is sitting on to change its properties, etc. (ngclass)
-2. structural:  changes the structure of the html code when its rendered to the browser (ngIf)
+2. structural:  changes the structure of the html code when its rendered to the browser (ngIf). Structural has an * beforehand.
+
+ex:
+<li *ngFor='let people of peoples'>
+
 
 ngClass needs property binding [ngClass]. it expect an object so you use object notation. properties are true or false.
 
@@ -173,3 +177,18 @@ https://stackoverflow.com/questions/37886276/providerouter-and-routerconfig-not-
 Router Outlet: The RouterOutlet directive is used to display views for a given route. However, note othat <router-outlet></router-outlet> gets an error. You need to put Router.Module.forRoot([]) ... in your app.module.ts. Go here for more: https://github.com/gdi2290/angular-starter/issues/1004
 
 <router-outlet></router-outlet>
+
+
+
+
+PIPES
+| goes after the data. it affects how the data is rendered on the browser.
+
+1. pipes can be functional too. example:  slice: 1:3 would slice off the 1st position and from the 3rd on.
+2. you can do multiple pipes (chaining) ex: | uppercase | slice: 1:3
+
+
+SERVICE
+say two components need to connect to a database to do something. You don't want to repeat yourself so you use a service.
+
+to create: ng g service <name>
