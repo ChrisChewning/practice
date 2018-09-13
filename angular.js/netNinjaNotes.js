@@ -7,6 +7,10 @@ INSTALL & LAUNCH
 
 - view in browser: ng serve  from the root folder. localhost://4200
 
+GENERATE COMPONENTS
+
+ng generate component <name> or ng g c <name>
+
 
 TYPESCRIPT
 - superset of js
@@ -76,7 +80,17 @@ Remember templateURL is your view.
 
 
 DIRECTIVES
+-Tell Angular to do something.
 -At a high level, directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children. (https://docs.angularjs.org/guide/directive)
+
+
+two main kinds:
+1. attribute: interact wiht the element it is sitting on to change its properties, etc. (ngclass)
+2. structural:  changes the structure of the html code when its rendered to the browser (ngIf)
+
+ngClass needs property binding [ngClass]. it expect an object so you use object notation. properties are true or false.
+
+
 
 HOW DATA FLOWS INTO THE VIEWS
 1. string interpolation {{title}}
@@ -92,7 +106,7 @@ In turn, updates any reference to the model/object in the view/template {{model}
 
 
 PROPERTY BINDING
--lets us bind data or expression to html properties.
+-lets us bind data or expression to html properties. So far weve mostly moved data from the component class to the component view.
 1. native HTML properties. ex:  [value]='expression'
 2. built-in angular directives. [ngClass]='expression'
 3. custom-made properties: [myProp]='expression'
@@ -112,3 +126,50 @@ TWO-WAY BINDING
     BrowserModule,
     FormsModule
   ],
+
+
+INPUT DECORATOR (down the tree)
+It is called an input property because data flows from the binding expression into the directive.
+
+Root component -> Home Component down the tree
+
+**how?
+@Input() <name>;   is saying input the variable <name>
+ex: @Input() chris;
+
+make sure to import Input at the top.
+ex: import { Component, OnInit, Input } from '@angular/core';
+
+
+OUTPUT DECORATOR
+
+Home component -> App Component up the tree
+
+
+ex: import { Component, OnInit, Input, Output } from '@angular/core';
+
+
+EVENT EMITTER
+Use in directives and components to emit custom events synchronously or asynchronously, and register handlers for those events by subscribing to an instance.
+
+Lets you say <functionName>.emit
+
+
+
+SETTING UP ROUTES
+- Create a routes file. export routes so they can be loaded in the main.ts file, which is outside your src folder.
+
+**in your app folder make a folder named app.routes.ts
+
+- Tell Angular where to load in our components / views when a route is requested.
+
+
+a lot of steps but this video is great: https://www.youtube.com/watch?v=patjvNM9Qbc&index=16&list=PL4cUxeGkcC9jqhk5RvBiEwHMKSUXPyng0
+
+However, note that it is provideRoutes not provideRouter in your app.routes.ts file. This may have been deprecated from angular1 to angular2.
+https://stackoverflow.com/questions/37886276/providerouter-and-routerconfig-not-found-in-new-angular-router-3-0-0-alpha-3
+
+
+Router Outlet: The RouterOutlet directive is used to display views for a given route. However, note othat <router-outlet></router-outlet> gets an error. You need to put Router.Module.forRoot([]) ... in your app.module.ts. Go here for more: https://github.com/gdi2290/angular-starter/issues/1004
+
+<router-outlet></router-outlet>
