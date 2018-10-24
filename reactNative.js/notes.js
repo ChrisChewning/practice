@@ -8,7 +8,7 @@ No div, span, h1, etc. b.c React Native doesnt work with normal html, css, or DO
 
 <View><Text>Hello world!</Text></View>.
 
-//Text just displays text. However, View is your wrapper, like div or span.
+//Text just displays text. However, View is your wrapper, like div.
 
 "Many frameworks use a special templating language which lets you embed code inside markup language. In React, this is reversed. JSX lets you write your markup language inside code."
 
@@ -173,3 +173,5 @@ Then the native system can load the bundle (for) the app and then actually run t
 ERROR HANDLING:
 Problem: 'Unable to resolve module 'react-native-vector-icons/Materiallcons'
 Solution: Install the icons. https://github.com/oblador/react-native-vector-icons#installation
+
+//======================== NOTE #8: Debugging ===================
