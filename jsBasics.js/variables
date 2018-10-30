@@ -1,0 +1,20 @@
+1. initialize a variable
+var greeting;  
+cannot say const greeting though. Error: missing initializer in const declaration.
+
+2. you can reassign let and var but not const. 
+
+3. you can create private variables using the _ sign. 
+
+4. Variables can only have numbers, letters, _, and $. Cannot start with a number
+
+5. Conventions
+*js uses camelCase primarily but remember PHP and other would be camel_case
+*Pascal case is when each word starts with a capital letter.
+
+6. Object literal:
+
+ const person = {
+    name: 'chris',
+    age: 32
+}

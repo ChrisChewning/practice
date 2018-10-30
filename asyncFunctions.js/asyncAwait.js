@@ -44,7 +44,7 @@ async function init() {
 init()
 
 
-//ASYNC / AWAIT using FETCH
+//ASYNC / AWAIT using FETCH. 
 
 async function fetchUsers() {
   const res = await fetch('https://jsonplaceholder.typicode.com/users')

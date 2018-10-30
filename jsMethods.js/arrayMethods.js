@@ -1,8 +1,6 @@
 ARRAY METHODS (https://javascript.info/array-methods)
 
 
-
-
 ADD ITEMS
 arr.push() - adds items at the end.
 arr.unshift() - adds items at the beginning.
@@ -34,3 +32,5 @@ FILTER ITEMS create a new array.
 
 REDUCE ITEMS 
 .reduce()
+
+ 
