@@ -44,3 +44,13 @@ CSS GRIDS
 
 
 MEDIA QUERIES
+
+
+ROOT
+
+// Because of cascading, CSS variables are often defined in the :root element. This way they're available in the whole web page. The :root element is like a container for your entire HTML document, like html container is for body element.
+ex:
+:root {
+    --penguin-belly: pink;
+  }
+  

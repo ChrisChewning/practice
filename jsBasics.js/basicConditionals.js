@@ -96,6 +96,9 @@ const getFruitByColor = (color) => {
     var fruit = getFruitByColor(favoriteColor);
 
     console.log("I want to eat a " + fruit); //"I want to eat a banana"
+
+    var favoriteColor = "blue";
+    getFruitByColor(favoriteColor);
     console.log("I want to eat a " + fruit); //"I want to eat a grape.""
 
 

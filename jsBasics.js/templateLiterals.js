@@ -42,3 +42,12 @@ html = `
     <li>${age > 30 ? 'Over 30': 'Under 30'}  // the colon is basically 'else'
     </ul>
 `
+
+
+const id = 100; 
+
+if (id == 100) {
+    console.log(`The id is ${id}`);
+} else {
+    console.log('there is no id.')
+}
